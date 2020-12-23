@@ -36,7 +36,7 @@ export class TestappComponent implements OnInit {
 //     "globalPrice": 1600000,
 //     "status": "activated",
 //     "images": [
-//       "http://3.129.29.75:80/imgFrutme/server/local-storage/tixsImages/312e6c99-11af-41e8-86da-4eddf29bf67e.jpg"
+//       "https://db.buckapi.com:80/imgFrutme/server/local-storage/tixsImages/312e6c99-11af-41e8-86da-4eddf29bf67e.jpg"
 //     ]
 //   },
 //   {
@@ -48,7 +48,7 @@ export class TestappComponent implements OnInit {
 //     "globalPrice": 1600000,
 //     "status": "activated",
 //     "images": [
-//       "http://3.129.29.75:80/imgFrutme/server/local-storage/tixsImages/312e6c99-11af-41e8-86da-4eddf29bf67e.jpg"
+//       "https://db.buckapi.com:80/imgFrutme/server/local-storage/tixsImages/312e6c99-11af-41e8-86da-4eddf29bf67e.jpg"
 //     ]
 //   },
 //   {
@@ -60,7 +60,7 @@ export class TestappComponent implements OnInit {
 //     "globalPrice": 1600000,
 //     "status": "activated",
 //     "images": [
-//       "http://3.129.29.75:80/imgFrutme/server/local-storage/tixsImages/312e6c99-11af-41e8-86da-4eddf29bf67e.jpg"
+//       "https://db.buckapi.com:80/imgFrutme/server/local-storage/tixsImages/312e6c99-11af-41e8-86da-4eddf29bf67e.jpg"
 //     ]
 //   },
 //   {
@@ -72,7 +72,7 @@ export class TestappComponent implements OnInit {
 //     "globalPrice": 1600000,
 //     "status": "activated",
 //     "images": [
-//       "http://3.129.29.75:80/imgFrutme/server/local-storage/tixsImages/312e6c99-11af-41e8-86da-4eddf29bf67e.jpg"
+//       "https://db.buckapi.com:80/imgFrutme/server/local-storage/tixsImages/312e6c99-11af-41e8-86da-4eddf29bf67e.jpg"
 //     ]
 //   },
 //   {
@@ -84,7 +84,7 @@ export class TestappComponent implements OnInit {
 //     "globalPrice": 1600000,
 //     "status": "activated",
 //     "images": [
-//       "http://3.129.29.75:80/imgFrutme/server/local-storage/tixsImages/312e6c99-11af-41e8-86da-4eddf29bf67e.jpg"
+//       "https://db.buckapi.com:80/imgFrutme/server/local-storage/tixsImages/312e6c99-11af-41e8-86da-4eddf29bf67e.jpg"
 //     ]
 //   },
 //   {
@@ -96,7 +96,7 @@ export class TestappComponent implements OnInit {
 //     "globalPrice": 1600000,
 //     "status": "activated",
 //     "images": [
-//       "http://3.129.29.75:80/imgFrutme/server/local-storage/tixsImages/312e6c99-11af-41e8-86da-4eddf29bf67e.jpg"
+//       "https://db.buckapi.com:80/imgFrutme/server/local-storage/tixsImages/312e6c99-11af-41e8-86da-4eddf29bf67e.jpg"
 //     ]
 //   },
 //   {
@@ -108,7 +108,7 @@ export class TestappComponent implements OnInit {
 //     "globalPrice": 1600000,
 //     "status": "activated",
 //     "images": [
-//       "http://3.129.29.75:80/imgFrutme/server/local-storage/tixsImages/312e6c99-11af-41e8-86da-4eddf29bf67e.jpg"
+//       "https://db.buckapi.com:80/imgFrutme/server/local-storage/tixsImages/312e6c99-11af-41e8-86da-4eddf29bf67e.jpg"
 //     ]
 //   },
 //   {
@@ -120,7 +120,7 @@ export class TestappComponent implements OnInit {
 //     "globalPrice": 1600000,
 //     "status": "activated",
 //     "images": [
-//       "http://3.129.29.75:80/imgFrutme/server/local-storage/tixsImages/312e6c99-11af-41e8-86da-4eddf29bf67e.jpg"
+//       "https://db.buckapi.com:80/imgFrutme/server/local-storage/tixsImages/312e6c99-11af-41e8-86da-4eddf29bf67e.jpg"
 //     ]
 //   },
 //   {
@@ -132,7 +132,7 @@ export class TestappComponent implements OnInit {
 //     "globalPrice": 1600000,
 //     "status": "activated",
 //     "images": [
-//       "http://3.129.29.75:80/imgFrutme/server/local-storage/tixsImages/312e6c99-11af-41e8-86da-4eddf29bf67e.jpg"
+//       "https://db.buckapi.com:80/imgFrutme/server/local-storage/tixsImages/312e6c99-11af-41e8-86da-4eddf29bf67e.jpg"
 //     ]
 //   },
 //   {
@@ -144,7 +144,7 @@ export class TestappComponent implements OnInit {
 //     "globalPrice": 1600000,
 //     "status": "activated",
 //     "images": [
-//       "http://3.129.29.75:80/imgFrutme/server/local-storage/tixsImages/312e6c99-11af-41e8-86da-4eddf29bf67e.jpg"
+//       "https://db.buckapi.com:80/imgFrutme/server/local-storage/tixsImages/312e6c99-11af-41e8-86da-4eddf29bf67e.jpg"
 //     ]
 //   } 
 
