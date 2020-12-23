@@ -1,0 +1,53 @@
+
+	<div class="">
+		<div class="all-product-grid">
+			<div class="container">	
+				<div class="product-list-view">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 col-xs-6" *ngFor="let tix of tixs">
+							<div class="product-item mb-30">
+								<a href="#" class="product-img">
+									<img src="{{tix.images[0]}}" alt="">
+									<div class="product-absolute-options">
+										<!-- <span class="offer-badge-1">6% MENOS</span> -->
+										<span class="like-icon" title="wishlist"></span>
+									</div>
+								</a>
+								<div class="product-text-dt" *ngIf="this._uw.info[0]">
+									<h4>{{tix.productName}}</h4>
+									<!-- <p>Disponible<span>(14 Kg En Stock)</span></p> -->
+									<div class="product-price" [hidden]="this._uw.currency==this._uw.info[0].bs">$ {{tix.globalPrice*this._uw.currency |  number:'1.0-2' }}
+									</div>
+									<div class="product-price"  [hidden]="this._uw.currency==this._uw.info[0].usd ">BsS. {{tix.globalPrice*this._uw.currency |  number:'1.0-0' }}
+									</div>
+									 <span>{{tix.presentacion}}</span>
+									<div class="qty-cart">
+										<div class="quantity buttons_added">
+											<input type="button" value="-" class="minus minus-btn">
+											<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
+											<input type="button" value="+" class="plus plus-btn">
+										</div>
+										<span class="cart-icon"><i class="uil uil-shopping-cart-alt"></i></span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+			
+						<div class="col-md-12">
+							<div class="more-product-btn">
+								<button class="show-more-btn hover-btn" onclick="window.location.href = '#';">Mostrar Más</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Body End -->
+
+<!-- <a href="index.html#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a>  -->
+<a tw-mt-30 href="https://wa.me/584147529202?text=Hola,%20deseo%20realizar%20un%20pedido" class="whatsapp" target="_blank" title="ContÃ¡ctanos por whatsapp !" style="color: white;"> 
+         <i class="ion-social-whatsapp" style="color:#25d366;"></i>
+         </a>
