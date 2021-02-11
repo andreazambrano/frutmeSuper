@@ -40,7 +40,16 @@
 
 											<input type="button" value="+" class="plus plus-btn" (click)=plus(i)>
 										</div>
-										<span class="cart-icon" [hidden]="tix.quantity<1"><i class="uil uil-shopping-cart-alt"></i></span>
+
+										<div [hidden]="tix.quantity<1" style="margin-left: auto;">					
+											<img src="assets/assetssuper/images/oncart.svg" alt="frutme" style="height: 50px;width: 50px;cursor: pointer;"[hidden]="!tix.oncart" (click)="outcart(i)"
+											>
+											<img src="assets/assetssuper/images/outcart.svg" alt="frutme" style="height: 50px;width: 50px;cursor: pointer;"[hidden]="tix.oncart" (click)="oncart(i)"
+											>
+										</div>
+
+
+										<!-- <span class="cart-icon" [hidden]="tix.quantity<1"><i class="uil uil-shopping-cart-alt"></i></span> -->
 									</div>
 								</div>
 							</div>

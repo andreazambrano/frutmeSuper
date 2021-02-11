@@ -24,12 +24,24 @@ export class TestappComponent implements OnInit {
     .subscribe((tixs: TixInterface) => (this.tixs=tixs));
   }
 
-
+oncart(index){
+   let id=index;
+  this.tixs[id].oncart=true;
+  console.log("en el carrito");
+}
+outcart(index){
+    let id=index;
+   this.tixs[id].oncart=false;
+     console.log("fuera del carrito");
+}
 
 minus(index){
    let id=index;
    if(this.tixs[id].quantity>0){      
    this.tixs[id].quantity=this.tixs[id].quantity-1;
+  }
+  if(this.tixs[id].quantity==0){
+    this.tixs[id].oncart=false;
   }
 }
 plus(index){
