@@ -31,6 +31,7 @@ oncart(index){
 }
 outcart(index){
     let id=index;
+    this.toxs[id].quantity=0;
    this.tixs[id].oncart=false;
      console.log("fuera del carrito");
 }
