@@ -4,30 +4,43 @@
 			<div class="container">	
 				<div class="product-list-view">
 					<div class="row">
-						<div class="col-lg-3 col-md-6 col-xs-6" *ngFor="let tix of tixs">
+						<div class="col-lg-3 col-md-6 col-xs-6" *ngFor="let tix of tixs;let i = index">
 							<div class="product-item mb-30">
 								<a href="#" class="product-img">
 									<img src="{{tix.images[0]}}" alt="">
 									<div class="product-absolute-options">
 										<!-- <span class="offer-badge-1">6% MENOS</span> -->
-										<span class="like-icon" title="wishlist"></span>
+										<!-- <span class="like-icon" title="wishlist"></span> -->
+									
 									</div>
 								</a>
-								<div class="product-text-dt" *ngIf="this._uw.info[0]">
+								<div class="product-text-dt" *ngIf="this._uw.info[0]" style="padding-top:5px;">
 									<h4>{{tix.productName}}</h4>
 									<!-- <p>Disponible<span>(14 Kg En Stock)</span></p> -->
-									<div class="product-price" [hidden]="this._uw.currency==this._uw.info[0].bs">$ {{tix.globalPrice*this._uw.currency |  number:'1.0-2' }}
+									<div class="product-price" [hidden]="this._uw.currency==this._uw.info[0].bs"><span  style="color:#000; text-transform: none !important; font-weight: normal; text-decoration: none; font-size: 12px; ">$USD </span>{{tix.globalPrice*this._uw.currency |  number:'1.0-2' }}
 									</div>
-									<div class="product-price"  [hidden]="this._uw.currency==this._uw.info[0].usd ">BsS. {{tix.globalPrice*this._uw.currency |  number:'1.0-0' }}
+									<div class="product-price"  [hidden]="this._uw.currency==this._uw.info[0].usd "><span  style="color:#000; text-transform: none !important; font-weight: normal; text-decoration: none; font-size: 12px; ">BsS.</span> {{tix.globalPrice*this._uw.currency |  number:'1.0-0' }}
 									</div>
-									 <span>{{tix.presentacion}}</span>
+									 
 									<div class="qty-cart">
 										<div class="quantity buttons_added">
-											<input type="button" value="-" class="minus minus-btn">
-											<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
-											<input type="button" value="+" class="plus plus-btn">
+											<input type="button" value="-" class="minus minus-btn" (click)=minus(i)>
+											<!-- <input type="number" step="1" name="quantity" value="1" class="input-text qty text"> -->
+
+											<span class="qty text"  style="color:#000; text-transform: none !important; font-weight: bold; text-decoration: none; padding-left:4px;" [hidden]="tix.quantity>0">{{tix.quantity}} 
+											</span> 
+
+											<span class="qty text"  style="color:#f55d2c; font-size: 16px; text-transform: none !important; font-weight: bold; text-decoration: none; padding-left:4px;"  [hidden]="tix.quantity<1">{{tix.quantity}} </span>  
+
+											<span style="padding-right:4px;" [hidden]="tix.quantity>0">		({{tix.presentacion}})
+											</span>
+
+											<span style="padding-right:4px;" style="color:#f55d2c;" [hidden]="tix.quantity<1">		({{tix.presentacion}})
+											</span>
+
+											<input type="button" value="+" class="plus plus-btn" (click)=plus(i)>
 										</div>
-										<span class="cart-icon"><i class="uil uil-shopping-cart-alt"></i></span>
+										<span class="cart-icon" [hidden]="tix.quantity<1"><i class="uil uil-shopping-cart-alt"></i></span>
 									</div>
 								</div>
 							</div>

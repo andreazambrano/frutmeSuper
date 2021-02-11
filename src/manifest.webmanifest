@@ -5,7 +5,7 @@
   "background_color": "#000",
   "display": "fullscreen",
   "scope": "/",
-  "start_url": "ttps://https://frutme.buckapi.com/",
+  "start_url": "/",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",

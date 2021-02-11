@@ -24,6 +24,19 @@ export class TestappComponent implements OnInit {
     .subscribe((tixs: TixInterface) => (this.tixs=tixs));
   }
 
+
+
+minus(index){
+   let id=index;
+   if(this.tixs[id].quantity>0){      
+   this.tixs[id].quantity=this.tixs[id].quantity-1;
+  }
+}
+plus(index){
+  let id=index;
+  this.tixs[id].quantity=this.tixs[id].quantity+1;
+}
+
   ngOnInit() {
      this.getAllTixs();
 //     this.tixs=
