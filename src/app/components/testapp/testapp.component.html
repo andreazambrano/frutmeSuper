@@ -55,7 +55,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="product-item mb-30"  [hidden]="!tix.oncart" style="box-shadow:0px 0px 9px 6px #07d7652e;">
+							<div class="product-item mb-30"  [hidden]="!tix.oncart" style="box-shadow:0px 0px 9px 6px #07d7652e;"	>
 								<a href="#" class="product-img">
 									<img src="{{tix.images[0]}}" alt="">
 									<div class="product-absolute-options">
@@ -92,9 +92,9 @@
 										</div>
 
 										<div [hidden]="tix.quantity<1" style="margin-left: auto;">					
-											<img src="assets/assetssuper/images/oncart.svg" alt="frutme" style="height: 50px;width: 50px;cursor: pointer;"[hidden]="!tix.oncart" (click)="outcart(i)"
+											<img src="assets/assetssuper/images/oncart.svg" alt="frutme" title="Agregar al carrito" style="height: 50px;width: 50px;cursor: pointer;"[hidden]="!tix.oncart" (click)="outcart(i)"
 											>
-											<img src="assets/assetssuper/images/outcart.svg" alt="frutme" style="height: 50px;width: 50px;cursor: pointer;"[hidden]="tix.oncart" (click)="oncart(i)"
+											<img src="assets/assetssuper/images/outcart.svg" alt="frutme" title="Sacar del carrito" style="height: 50px;width: 50px;cursor: pointer;"[hidden]="tix.oncart" (click)="oncart(i)"
 											>
 										</div>
 
