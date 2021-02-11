@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.26120688"
-     inkscape:cx="155.93018"
-     inkscape:cy="575.89367"
+     inkscape:zoom="0.26834926"
+     inkscape:cx="-699.91097"
+     inkscape:cy="941.95047"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -82,5 +82,20 @@
            sodipodi:nodetypes="csccccccccc" />
       </g>
     </g>
+    <ellipse
+       style="fill:#f55d2c;fill-opacity:1;stroke:none;stroke-width:6.8840003;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="path818"
+       cx="71.72905"
+       cy="156.25331"
+       rx="35.74128"
+       ry="11.585104" />
+    <ellipse
+       style="fill:#f55d2c;fill-opacity:1;stroke:none;stroke-width:6.07709503;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="path818-3"
+       cx="151.29283"
+       cy="-82.098068"
+       rx="27.87125"
+       ry="11.577744"
+       transform="matrix(-0.07289085,0.99733992,-0.99901798,-0.04430652,0,0)" />
   </g>
 </svg>
