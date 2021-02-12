@@ -119,7 +119,7 @@ export class FruittopbarComponent implements OnInit {
 
        if (this._uw.loaded==true){
           this.loadAPI = new Promise(resolve => {
-            this.loadScript();
+            // this.loadScript();
             this.loadInfo1();
             // this._uw.currency=this._uw.info[0].bs;
           });
