@@ -1196,7 +1196,7 @@ background-image:-webkit-linear-gradient(left, #fff, #fff);
 }
 
 .main-cart-title span{
-	color: #f69733;
+	color: #005e53;
     margin-left: 5px;
 }
 
@@ -1571,7 +1571,7 @@ background-image:-webkit-linear-gradient(left, #fff, #fff);
 }
 		
 .side-cart-header {
-    background: #005e53;
+    background: #07d765;
     color: #fff;
 	position: sticky;
     top: 0;

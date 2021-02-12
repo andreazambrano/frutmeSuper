@@ -119,7 +119,7 @@ export class FruittopbarComponent implements OnInit {
 
        if (this._uw.loaded==true){
           this.loadAPI = new Promise(resolve => {
-            // this.loadScript();
+            this.loadScript();
             this.loadInfo1();
             // this._uw.currency=this._uw.info[0].bs;
           });
@@ -133,12 +133,12 @@ export class FruittopbarComponent implements OnInit {
     //     }
     //     this._uw.loaded=true;
   }
-    //   public loadScript() {
-    //   let node = document.createElement("script");
-    //   node.src = this.url;
-    //   node.type = "text/javascript";
-    //   node.async = true;
-    //   node.charset = "utf-8";
-    //   document.getElementsByTagName("head")[0].appendChild(node);
-    // }
+      public loadScript() {
+      let node = document.createElement("script");
+      node.src = this.url;
+      node.type = "text/javascript";
+      node.async = true;
+      node.charset = "utf-8";
+      document.getElementsByTagName("head")[0].appendChild(node);
+    }
 }

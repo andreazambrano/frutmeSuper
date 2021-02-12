@@ -399,17 +399,21 @@
               </a>
       
             </li>  
-          <li class="ui dropdown" *ngIf="this._uw.info[0]">
+            <li class="offer-link">
+              
+            <span></span>
+            </li>
+            <li class="ui dropdown" *ngIf="this._uw.info[0]">
               <a href="#" class="opts_account"  [hidden]="this._uw.currency==this._uw.info[0].bs" (click)=setBs()>
                 <img src="assets/assetssuper/images/avatar/img-5.jpg" alt="" >
-                <span ></span>
+                <span > </span>
                 <i class="uil uil-angle-down"></i>
               </a>
 
               
                <a href="#" class="opts_account"  [hidden]="this._uw.currency==this._uw.info[0].usd " (click)=setUsd()>
                 <img src="assets/assetssuper/images/avatar/img-8.jpg" alt="" >
-                <span ></span>
+                <span >  </span>
                 <i class="uil uil-angle-down"></i>
               </a>
 
