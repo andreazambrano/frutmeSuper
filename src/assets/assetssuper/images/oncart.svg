@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.13060344"
-     inkscape:cx="-546.86845"
-     inkscape:cy="1110.934"
+     inkscape:zoom="0.092350578"
+     inkscape:cx="135.47008"
+     inkscape:cy="707.60181"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -35,7 +35,15 @@
      inkscape:window-height="744"
      inkscape:window-x="0"
      inkscape:window-y="0"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="94.902738,160.43935"
+       orientation="0,1"
+       id="guide61"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
   <metadata
      id="metadata996">
     <rdf:RDF>
@@ -91,18 +99,18 @@
     <ellipse
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.60428834;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        id="path14"
-       cx="-15.294191"
-       cy="174.03784"
+       cx="-146.62172"
+       cy="74.47216"
        rx="30.935659"
        ry="7.573535"
-       transform="matrix(0.75393294,-0.65695139,0.54618438,0.83766498,0,0)" />
+       transform="matrix(-0.75393294,-0.65695139,-0.54618438,0.83766498,0,0)" />
     <ellipse
-       transform="matrix(0.63303897,0.77411993,0.6610635,-0.75032996,0,0)"
-       ry="6.3192806"
-       rx="13.142582"
-       cy="-62.306229"
-       cx="153.55009"
-       id="ellipse25"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.14592552;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke" />
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.60428834;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="path14-3"
+       cx="-28.439428"
+       cy="167.22069"
+       rx="30.935659"
+       ry="7.573535"
+       transform="matrix(0.75393293,-0.65695139,0.54618438,0.83766498,0,0)" />
   </g>
 </svg>

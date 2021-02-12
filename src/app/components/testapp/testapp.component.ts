@@ -43,11 +43,13 @@ minus(index){
   }
   if(this.tixs[id].quantity==0){
     this.tixs[id].oncart=false;
+    this.outcart(id);
   }
 }
 plus(index){
   let id=index;
   this.tixs[id].quantity=this.tixs[id].quantity+1;
+  this.oncart(id);
 }
 
   ngOnInit() {
