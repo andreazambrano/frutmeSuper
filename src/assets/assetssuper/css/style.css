@@ -1023,7 +1023,7 @@ background-image:-webkit-linear-gradient(left, #fff, #fff);
 }
 
 .category-by-cat li {
-    width: 33.333%;
+    width: 20%;
 	vertical-align: middle;
 	display: inline-block;
 	list-style: none;

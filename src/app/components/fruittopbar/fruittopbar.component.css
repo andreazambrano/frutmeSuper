@@ -5,7 +5,7 @@
 	height: 20px;
 	width: 20px;
 
-	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	box-shadow:4px 6px 21px 9px #07d76514;
 	transform: scale(1);
 	animation: pulse 2s infinite;
 }
@@ -13,7 +13,8 @@
 @keyframes pulse {
 	0% {
 		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+		    box-shadow: 0 0 0 0 #f55d2c;
+;
 	}
 
 	70% {

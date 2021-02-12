@@ -1,5 +1,5 @@
     <!-- Category Model Start-->
-  <div id="category_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
+  <div id="category_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false" style="max-width: 1024px;">
         <div class="modal-dialog category-area" role="document">
             <div class="category-area-inner">
                 <div class="modal-header">
@@ -14,10 +14,10 @@
                     <ul class="category-by-cat">
             <li>
               <a href="index.html#" class="single-cat-item">
-                <div class="icon">
-                  <img src="assets/assetssuper/images/category/icon-1.svg" alt="">
+                <div class="icon ">
+                  <img src="assets/assetssuper/images/category/icon-1.svg" alt="" class="">
                 </div>
-                <div class="text"> Frutas y Hortalizas </div>
+                <div class="text" style="color:#f55d2c"> Frutas y Hortalizas </div>
               </a>
             </li>
              <li>
@@ -94,7 +94,7 @@
               </a>
             </li>
                     </ul>
-          <a href="index.html#" class="morecate-btn"><i class="uil uil-apps"></i>Más Categorías</a>
+         <!--  <a href="index.html#" class="morecate-btn"><i class="uil uil-apps"></i>Más Categorías</a> -->
                 </div>
             </div>
         </div>
@@ -239,6 +239,12 @@
           </h4>
           <span>$1</span>
         </div>
+        <div class="cart-total-dil">
+          <h4>Moneda: 
+          </h4>
+        <span [hidden]="_uw.currency!=1">BsS.</span>
+          <span [hidden]="_uw.currency==1">USD ({{1/_uw.currency |  number:'1.0-2'}} BsS.)</span>
+        </div>
         <div class="cart-total-dil pt-2">
           <h4>Cargos por Delivery</h4>
           <span>0</span>
@@ -348,7 +354,7 @@
           <a href="index.html"><img class="logo-inverse" src="assets/assetssuper/images/logo.png" alt=""></a>
         </div>
           <div class="catey__icon" style="margin-right: -27px;margin-left: 100px; ">
-          <a href="#" class="cate__btn" data-toggle="modal" data-target="#category_model" title="Categorias"><i class="uil uil-apps" ></i></a>
+          <a href="#" class="cate__btn" data-toggle="modal" data-target="#category_model" title="Categorias">  <img src="assets/assetssuper/images/category/icon-1.svg" alt="" style="width: 30px;"></a>
            <!-- style="padding-left: 41px;font-size: 31px;color: #f55d2c;" -->
         </div>
        <!--  <div class="select_location" style="margin-right: -27px;margin-left: 44px; ">
@@ -387,7 +393,7 @@
               <a href="#" class="offer-link">+58<i class="uil uil-phone-alt"></i>414-752-9202</a>
             </li>
             <li>
-              <a href="#" class="category_drop hover-btn" data-toggle="modal" data-target="#category_model" title="Categories"><i class="uil uil-apps"></i><span class="cate__icon">Categorías</span></a>
+              <a href="#" class="category_drop hover-btn" data-toggle="modal" data-target="#category_model" title="Categories"><img src="assets/assetssuper/images/category/icon-1.svg" alt="" style="width: 30px;"><span class="cate__icon">Categorías</span></a>
             </li>
             <li>
               <!-- <a href="faq.html" class="offer-link"><i class="uil uil-question-circle"></i>Help</a> -->

@@ -31,6 +31,10 @@ export class DataApiService {
 		const url_api = 'https://db.buckapi.com:3025/api/tixes?filter[where][status]=activated';
 		return this.http.get(url_api);
 	}
+	getAllTixsInitload(){
+		const url_api = 'https://db.buckapi.com:3025/api/tixes?filter[where][initload]=activated';
+		return this.http.get(url_api);
+	}
 	getInfo(){
 		const url_api=`https://db.buckapi.com:3025/api/infos/`;
 		this.info = this.http.get(url_api);

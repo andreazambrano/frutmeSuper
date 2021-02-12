@@ -18,12 +18,19 @@ export class TestappComponent implements OnInit {
    // url="assets/assetsfruit/js/jquery.parallax-scroll.js";
    // url2 = "assets/assetsfruit/js/scripts.js";
      public tixs:TixInterface;
-  getAllTixs(){
+  getAllTixsInitload(){
+    this.dataApi
+    .getAllTixsInitload()
+    .subscribe((tixs: TixInterface) => (this.tixs=tixs));
+  }
+   getAllTixs(){
     this.dataApi
     .getAllTixs()
     .subscribe((tixs: TixInterface) => (this.tixs=tixs));
   }
-
+loadmore(){
+  this.getAllTixs();
+}
 oncart(index){
    let id=index;
   this.tixs[id].oncart=true;
@@ -53,7 +60,7 @@ plus(index){
 }
 
   ngOnInit() {
-     this.getAllTixs();
+     this.getAllTixsInitload();
 //     this.tixs=
 // {
 //     "id": "5fdcb5206a1b7205a51f4641",
