@@ -6,6 +6,7 @@ export interface TixInterface{
 	capacidad?:number;
 	category?:string;
 	categoryFilter?:string;
+	categorySuper?:string;
 	check?:Array<boolean>;
 	codigo?:string;
 	color?:string;

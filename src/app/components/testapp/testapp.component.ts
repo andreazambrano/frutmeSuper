@@ -28,6 +28,16 @@ export class TestappComponent implements OnInit {
     .getAllTixs()
     .subscribe((tixs: TixInterface) => (this.tixs=tixs));
   }
+  inicializador (){
+    for(let i = 0; i < 45; i++){
+    this.tixs[i].categorySuper="fruteria";
+    this.dataApi.updateTix(this.tixs[i], this.tixs[i].id)
+        .subscribe(
+        );
+
+  
+    }
+  }
 loadmore(){
   this.getAllTixs();
 }

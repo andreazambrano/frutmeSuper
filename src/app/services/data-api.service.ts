@@ -27,6 +27,13 @@ export class DataApiService {
   		"Content-Type":"application/json",
   		Authorization: this.authService.getToken()
   		});
+  	updateTix(tix :TixInterface, id: string){
+		// let token = this.authService.getToken();
+		const url_api=`https://db.buckapi.com:3025/api/tixes/${id}`;
+		return this.http
+		.put<TixInterface>(url_api, tix)
+		.pipe(map(data => data));
+	}
 	getAllTixs(){
 		const url_api = 'https://db.buckapi.com:3025/api/tixes?filter[where][status]=activated';
 		return this.http.get(url_api);
