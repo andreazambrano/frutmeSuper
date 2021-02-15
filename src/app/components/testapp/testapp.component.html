@@ -5,7 +5,7 @@
 				<div class="product-list-view">
 					<div class="row">
 						
-						<div class="col-lg-3 col-md-6 col-xs-6" *ngFor="let tix of tixs;let i = index" [hidden]="tix.categorySuper!=this._uw.categorySelected" >
+						<div class="col-lg-3 col-md-6 col-xs-6" *ngFor="let tix of tixs;let i = index" [hidden]="tix.categorySuper!=this._uw.categorySelected && !showAll" >
 
 							
 							<div class="product-item mb-30" [hidden]="tix.oncart ">
@@ -111,9 +111,14 @@
 
 
 			
-						<div class="col-md-12">
+						<div class="col-md-12" [hidden]="showAll">
 							<div class="more-product-btn">
 								<button class="show-more-btn hover-btn" (click)="loadmore()">Mostrar Más</button>
+							</div>
+						</div>
+						<div class="col-md-12" [hidden]="!showAll">
+							<div class="more-product-btn">
+								<button class="show-more-btn hover-btn">Mostrar Todos</button>
 							</div>
 						</div>
 					</div>

@@ -22,8 +22,8 @@ export class FruittopbarComponent implements OnInit {
    loadAPI = null;  
   //  url = "assets/assetsfruit/js/popper.min.js";
   filter(parametro:string){
+    this._uw.showAll=false;
     this._uw.categorySelected=parametro;
-    console.log("category selected: " +this._uw.categorySelected);
   }
   loadInfo(){
     this.dataApi
@@ -39,6 +39,7 @@ export class FruittopbarComponent implements OnInit {
      });
   }
     loadInfo1(){
+      this._uw.showAll=true;
     this.dataApi
     .getInfo()
     .subscribe((res:any) => {

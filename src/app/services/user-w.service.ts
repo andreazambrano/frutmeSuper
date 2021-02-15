@@ -47,6 +47,7 @@ export class UserWService {
 	recargo:boolean=false;
 	selectorA:boolean;
 	selectorB:boolean;
+	showAll:boolean=false;
 	subTotal:number=0;
 	tixs:any[]=[];
 	tixPreview:any={};

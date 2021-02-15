@@ -60,6 +60,7 @@ plus(index){
   this.oncart(id);
 }
 
+
   ngOnInit() {
      this.getAllTixsInitload();
      this._uw.categorySelected="hortalizas";
