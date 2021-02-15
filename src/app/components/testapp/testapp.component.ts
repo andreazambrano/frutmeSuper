@@ -31,6 +31,11 @@ export class TestappComponent implements OnInit {
 
 loadmore(){
   this.getAllTixs();
+  this._uw.allLoaded=true;
+  this._uw.showAll=true;
+}
+showAll(){
+  this._uw.showAll=true;
 }
 oncart(index){
    let id=index;

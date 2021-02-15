@@ -39,7 +39,7 @@ export class FruittopbarComponent implements OnInit {
      });
   }
     loadInfo1(){
-      this._uw.showAll=true;
+   
     this.dataApi
     .getInfo()
     .subscribe((res:any) => {
