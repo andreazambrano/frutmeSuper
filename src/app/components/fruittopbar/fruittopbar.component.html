@@ -12,16 +12,16 @@
             <h4>Categorías</h4>
           </div>
                     <ul class="category-by-cat">
-            <li>
-              <a href="index.html#" class="single-cat-item">
+            <li (click)="filter('hortalizas')">
+              <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
                 <div class="icon ">
                   <img src="assets/assetssuper/images/category/icon-1.svg" alt="" class="">
                 </div>
                 <div class="text" style="color:#f55d2c"> Frutas y Hortalizas </div>
               </a>
             </li>
-             <li>
-              <a href="index.html#" class="single-cat-item">
+             <li (click)="filter('carnes')">
+              <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
                 <div class="icon">
                   <img src="assets/assetssuper/images/category/icon-10.svg" alt="">
                 </div>
@@ -29,64 +29,64 @@
               </a>
             </li>
             <li>
-            <li>
-              <a href="index.html#" class="single-cat-item">
+            <li (click)="filter('viveres')">
+              <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
                 <div class="icon">
                   <img src="assets/assetssuper/images/category/icon-2.svg" alt="">
                 </div>
                 <div class="text"> Víveres </div>
               </a>
             </li>
-            <li>
-              <a href="index.html#" class="single-cat-item">
+            <li (click)="filter('lacteos')"> 
+              <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
                 <div class="icon">
                   <img src="assets/assetssuper/images/category/icon-7.svg" alt="">
                 </div>
                 <div class="text"> Huevos y lácteos </div>
               </a>
             </li>
-            <li>
-              <a href="index.html#" class="single-cat-item">
+            <li (click)="filter('bebidas')">
+              <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
                 <div class="icon">
                   <img src="assets/assetssuper/images/category/icon-3.svg" alt="">
                 </div>
                 <div class="text"> Bebidas y licores </div>
               </a>
             </li>
-            <li>
-              <a href="index.html#" class="single-cat-item">
+            <li (click)="filter('postres')">
+              <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
                 <div class="icon">
                   <img src="assets/assetssuper/images/category/icon-5.svg" alt="">
                 </div>
                 <div class="text"> Postres </div>
               </a>
             </li>
-            <li>
-              <a href="index.html#" class="single-cat-item">
+            <li (click)="filter('limpieza')">
+              <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
                 <div class="icon">
                   <img src="assets/assetssuper/images/category/icon-6.svg" alt="">
                 </div>
                 <div class="text"> Aseo y limpieza </div>
               </a>
             </li>
-            <li>
-              <a href="index.html#" class="single-cat-item">
+            <li (click)="filter('panaderia')">
+              <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
                 <div class="icon">
                   <img src="assets/assetssuper/images/category/icon-11.svg" alt="">
                 </div>
                 <div class="text"> Panadería </div>
               </a>
             </li>
-            <li>
-              <a href="index.html#" class="single-cat-item">
+            <li (click)="filter('aseopersonal')">
+              <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
                 <div class="icon">
                   <img src="assets/assetssuper/images/category/icon-8.svg" alt="">
                 </div>
                 <div class="text"> Aseo Personal </div>
               </a>
             </li>
-            <li>
-              <a href="index.html#" class="single-cat-item">
+            <li (click)="filter('mascotas')">
+              <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
                 <div class="icon">
                   <img src="assets/assetssuper/images/category/icon-9.svg" alt="">
                 </div>
@@ -94,7 +94,7 @@
               </a>
             </li>
                     </ul>
-         <!--  <a href="index.html#" class="morecate-btn"><i class="uil uil-apps"></i>Más Categorías</a> -->
+         <!--  <a  class="morecate-btn"><i class="uil uil-apps"></i>Más Categorías</a> -->
                 </div>
             </div>
         </div>
@@ -116,7 +116,7 @@
                     </div>
                     <ul class="currency-by-cat">
                       <li >
-                        <a class="single-cat-item" (click)=setBs()>
+                        <a class="single-cat-item bs-canvas-close" data-dismiss="modal" (click)=setBs()>
                           <div class="icon">
                             <img src="assets/assetssuper/images/category/vef.svg" alt="">
                           </div>
@@ -124,7 +124,7 @@
                         </a>
                       </li>
                  <!--      <li>
-                        <a href="index.html#" class="single-cat-item">
+                        <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
                           <div class="icon">
                             <img src="assets/assetssuper/images/category/colp.svg" alt="">
                           </div>
@@ -132,7 +132,7 @@
                         </a>
                       </li> -->
                       <li >
-                        <a  class="single-cat-item" (click)=setUsd()>
+                        <a  class="single-cat-item bs-canvas-close" data-dismiss="modal" (click)=setUsd()>
                           <div class="icon">
                             <img src="assets/assetssuper/images/category/usd.svg" alt="">
                           </div>
@@ -140,7 +140,7 @@
                         </a>
                       </li>
                     </ul>
-        <!--   <a href="index.html#" class="morecate-btn"><i class="uil uil-apps"></i>Más Categorías</a> -->
+        <!--   <a  class="morecate-btn"><i class="uil uil-apps"></i>Más Categorías</a> -->
                 </div>
             </div>
         </div>
@@ -251,7 +251,7 @@
         </div>
       </div>
       <div class="side-cart-items">
-        <div class="cart-item">
+        <div class="cart-item bs-canvas-close" data-dismiss="modal">
           <div class="cart-product-img">
             <img src="assets/assetssuper/images/product/img-1.jpg" alt="">
             <div class="offer-badge">6% MENOS</div>
@@ -290,7 +290,7 @@
             <button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button>
           </div>
         </div>
-        <div class="cart-item">
+        <div class="cart-item bs-canvas-close" data-dismiss="modal">
           <div class="cart-product-img">
             <img src="assets/assetssuper/images/product/img-2.jpg" alt="">
             <div class="offer-badge">6% MENOS</div>
@@ -365,11 +365,11 @@
             </div>
             <i class="uil uil-angle-down icon__14"></i>
             <div class="menu dropdown_loc">
-              <div class="item channel_item">
+              <div class="item channel_item bs-canvas-close" data-dismiss="modal">
                 <i class="uil uil-location-point"></i>
                 Merida
               </div>
-              <div class="item channel_item">
+              <div class="item channel_item bs-canvas-close" data-dismiss="modal">
                 <i class="uil uil-location-point"></i>
                 Ejido
               </div>
@@ -448,10 +448,10 @@
             <button class="navbar-toggler menu_toggle_btn" type="button" data-target="#navbarSupportedContent"><i class="uil uil-bars"></i></button>
             <div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
               <ul class="navbar-nav main_nav align-self-stretch">
-                <li class="nav-item"><a href="index.html" class="nav-link active" title="Home">Home</a></li>
-                <li class="nav-item"><a href="shop_grid.html" class="nav-link new_item" title="New Products">New Products</a></li>
-                <li class="nav-item"><a href="shop_grid.html" class="nav-link" title="Featured Products">Featured Products</a></li>
-                <li class="nav-item">
+                <li class="nav-item bs-canvas-close" data-dismiss="modal"><a href="index.html" class="nav-link active" title="Home">Home</a></li>
+                <li class="nav-item bs-canvas-close" data-dismiss="modal"><a href="shop_grid.html" class="nav-link new_item bs-canvas-close" data-dismiss="modal" title="New Products">New Products</a></li>
+                <li class="nav-item bs-canvas-close" data-dismiss="modal"><a href="shop_grid.html" class="nav-link" title="Featured Products">Featured Products</a></li>
+                <li class="nav-item bs-canvas-close" data-dismiss="modal">
                   <div class="ui icon top left dropdown nav__menu">
                     <a class="nav-link" title="Pages">Pages <i class="uil uil-angle-down"></i></a>
                     <div class="menu dropdown_page">
@@ -470,7 +470,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item bs-canvas-close" data-dismiss="modal">
                   <div class="ui icon top left dropdown nav__menu">
                     <a class="nav-link" title="Blog">Blog <i class="uil uil-angle-down"></i></a>
                     <div class="menu dropdown_page">
@@ -479,7 +479,7 @@
                     </div>
                   </div>
                 </li> 
-                <li class="nav-item"><a href="contact_us.html" class="nav-link" title="Contact">Contact Us</a></li>
+                <li class="nav-item bs-canvas-close" data-dismiss="modal"><a href="contact_us.html" class="nav-link" title="Contact">Contact Us</a></li>
               </ul>
             </div>
           </div>

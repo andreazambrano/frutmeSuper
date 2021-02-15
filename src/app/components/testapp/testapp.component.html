@@ -5,14 +5,15 @@
 				<div class="product-list-view">
 					<div class="row">
 						
-						<div class="col-lg-3 col-md-6 col-xs-6" *ngFor="let tix of tixs;let i = index">
+						<div class="col-lg-3 col-md-6 col-xs-6" *ngFor="let tix of tixs;let i = index" [hidden]="tix.categorySuper!=this._uw.categorySelected" >
 
 							
-							<div class="product-item mb-30" [hidden]="tix.oncart">
+							<div class="product-item mb-30" [hidden]="tix.oncart ">
 								<a href="#" class="product-img">
 									<img src="{{tix.images[0]}}" alt="">
 									<div class="product-absolute-options">
-										<!-- <span class="offer-badge-1">6% MENOS</span> -->
+										<span class="offer-badge-2" [hidden]="!tix.stockStatus">Disponible</span>
+										<span class="offer-badge-1" [hidden]="tix.stockStatus">Agotado</span>
 										<!-- <span class="like-icon" title="wishlist"></span> -->
 									
 									</div>
@@ -56,17 +57,19 @@
 									</div>
 								</div>
 							</div>
-							<div class="product-item mb-30"  [hidden]="!tix.oncart" style="box-shadow:4px 6px 21px 9px #07d76514"	>
+							<div class="product-item mb-30"  [hidden]="!tix.oncart " style="box-shadow:4px 6px 21px 9px #07d76514"	>
 								<a href="#" class="product-img">
 									<img src="{{tix.images[0]}}" alt="">
 									<div class="product-absolute-options">
-										<!-- <span class="offer-badge-1">6% MENOS</span> -->
+										<span class="offer-badge-2" [hidden]="!tix.stockStatus">Disponible</span>
+										<span class="offer-badge-1" [hidden]="tix.stockStatus">Agotado</span>
 										<!-- <span class="like-icon" title="wishlist"></span> -->
 									
 									</div>
 								</a>
 								<div class="product-text-dt" *ngIf="this._uw.info[0]" style="padding-top:5px;">
 									<h4>{{tix.productName}}</h4>
+
 									<!-- <p>Disponible<span>(14 Kg En Stock)</span></p> -->
 									<div class="product-price" [hidden]="this._uw.currency==this._uw.info[0].bs"><span  style="color:#000; text-transform: none !important; font-weight: normal; text-decoration: none; font-size: 12px; ">$USD </span>{{tix.globalPrice*this._uw.currency |  number:'1.0-2' }}
 									</div>
