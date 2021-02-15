@@ -18,10 +18,14 @@ export class FruittopbarComponent implements OnInit {
   public router: Router,
   public location: Location
   	) { }
+       public tixs:TixInterface;
     public tixToAdd:TixInterface;
    loadAPI = null;  
   //  url = "assets/assetsfruit/js/popper.min.js";
   filter(parametro:string){
+    if(this._uw.allLoaded!=true){
+        this.getAllTixs();
+    }
     this._uw.showAll=false;
     this._uw.categorySelected=parametro;
   }
@@ -60,6 +64,11 @@ export class FruittopbarComponent implements OnInit {
    setUsd(){
     this.loadInfo();
     this._uw.currency=this._uw.info[0].usd;
+  }
+    getAllTixs(){
+    this.dataApi
+    .getAllTixs()
+    .subscribe((tixs: TixInterface) => (this.tixs=tixs));
   }
 
   ngOnInit() {
