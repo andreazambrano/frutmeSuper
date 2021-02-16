@@ -25,14 +25,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.092350578"
-     inkscape:cx="135.47008"
-     inkscape:cy="707.60181"
+     inkscape:zoom="0.52241376"
+     inkscape:cx="426.16793"
+     inkscape:cy="444.94195"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1024"
-     inkscape:window-height="744"
+     inkscape:window-height="721"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -61,14 +61,14 @@
      inkscape:groupmode="layer"
      id="layer1">
     <g
-       id="g846">
+       id="g31">
       <rect
-         y="53.394474"
-         x="-48.610226"
-         height="220.79745"
-         width="229.9138"
+         y="56.828285"
+         x="-26.06942"
+         height="201.55658"
+         width="170.29448"
          id="rect817"
-         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:6.90447521;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke" />
+         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:5.67740488;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke" />
       <g
          id="g973"
          transform="translate(-274.13298,16.653374)">
@@ -95,22 +95,22 @@
              inkscape:connector-curvature="0" />
         </g>
       </g>
+      <ellipse
+         transform="matrix(-0.75393294,-0.65695139,-0.54618438,0.83766498,0,0)"
+         ry="7.573535"
+         rx="30.935659"
+         cy="74.47216"
+         cx="-146.62172"
+         id="path14"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.60428834;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke" />
+      <ellipse
+         transform="matrix(0.75393293,-0.65695139,0.54618438,0.83766498,0,0)"
+         ry="7.573535"
+         rx="30.935659"
+         cy="167.22069"
+         cx="-28.439428"
+         id="path14-3"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.60428834;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke" />
     </g>
-    <ellipse
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.60428834;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-       id="path14"
-       cx="-146.62172"
-       cy="74.47216"
-       rx="30.935659"
-       ry="7.573535"
-       transform="matrix(-0.75393294,-0.65695139,-0.54618438,0.83766498,0,0)" />
-    <ellipse
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.60428834;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
-       id="path14-3"
-       cx="-28.439428"
-       cy="167.22069"
-       rx="30.935659"
-       ry="7.573535"
-       transform="matrix(0.75393293,-0.65695139,0.54618438,0.83766498,0,0)" />
   </g>
 </svg>
