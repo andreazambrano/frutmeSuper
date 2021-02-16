@@ -13,15 +13,15 @@ import { TixInterface } from '../../models/tix-interface';
 export class FruittopbarComponent implements OnInit {
   info:any={};
   constructor(
- public _uw:UserWService,
- private dataApi: DataApiService,
-  public router: Router,
-  public location: Location
-  	) { }
-       public tixs:TixInterface;
-    public tixToAdd:TixInterface;
-   loadAPI = null;  
-  //  url = "assets/assetsfruit/js/popper.min.js";
+    public _uw:UserWService,
+    private dataApi: DataApiService,
+    public router: Router,
+    public location: Location
+	) { }
+  public tixs:TixInterface;
+  public tixToAdd:TixInterface;
+
+  loadAPI = null;  
   filter(parametro:string){
     if(this._uw.allLoaded!=true){
         this.getAllTixs();
@@ -37,13 +37,10 @@ export class FruittopbarComponent implements OnInit {
        }else{
         this.info=res;
         this._uw.info=this.info;
-        // this._uw.currency=this._uw.info[0].usd;
-
         }
      });
   }
-    loadInfo1(){
-   
+  loadInfo1(){   
     this.dataApi
     .getInfo()
     .subscribe((res:any) => {
@@ -56,45 +53,37 @@ export class FruittopbarComponent implements OnInit {
         }
      });
   }
-
- setBs(){
+  setBs(){
     this.loadInfo();
     this._uw.currency=this._uw.info[0].bs;
   }
-   setUsd(){
+  setUsd(){
     this.loadInfo();
     this._uw.currency=this._uw.info[0].usd;
   }
-    getAllTixs(){
+  getAllTixs(){
     this.dataApi
     .getAllTixs()
-    .subscribe((tixs: TixInterface) => (this.tixs=tixs));
+    .subscribe((res:any) => {
+      if (res[0] === undefined){
+        return
+        }else{
+          this.tixs=res[0];
+
+         this._uw.totalTixs = res.length;
+        }
+      });
   }
+
+ 
+
 
   ngOnInit() {
-
        if (this._uw.loaded==true){
           this.loadAPI = new Promise(resolve => {
-            // this.loadScript();
             this.loadInfo1();
-            // this._uw.currency=this._uw.info[0].bs;
           });
         }
-        this._uw.loaded=true;
-  	 // if (this._uw.loaded==true){
-    //       this.loadAPI = new Promise(resolve => {
-    //         // this.loadScript();
-    //         this.loadInfo();
-    //       });
-    //     }
-    //     this._uw.loaded=true;
+        this._uw.loaded=true;  	
   }
-    //   public loadScript() {
-    //   let node = document.createElement("script");
-    //   node.src = this.url;
-    //   node.type = "text/javascript";
-    //   node.async = true;
-    //   node.charset = "utf-8";
-    //   document.getElementsByTagName("head")[0].appendChild(node);
-    // }
 }

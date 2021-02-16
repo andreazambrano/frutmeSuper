@@ -38,6 +38,16 @@ export class DataApiService {
 		const url_api = 'https://db.buckapi.com:3025/api/tixes?filter[where][status]=activated';
 		return this.http.get(url_api);
 	}
+ 		getTamano(){
+		const url_api = 'https://db.buckapi.com:3025/api/tixes?filter[where][status]=activated';
+		return (this.tixs = this.http.get(url_api));
+	}
+	getTamanoIni(){
+		const url_api = 'https://db.buckapi.com:3025/api/tixes?filter[where][initload]=activated';
+		return (this.tixs = this.http.get(url_api));
+	}
+ 	
+
 	getAllTixsInitload(){
 		const url_api = 'https://db.buckapi.com:3025/api/tixes?filter[where][initload]=activated';
 		return this.http.get(url_api);
