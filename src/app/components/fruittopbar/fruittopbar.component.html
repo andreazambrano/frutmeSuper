@@ -8,93 +8,104 @@
                     </button>
                 </div>
                 <div class="category-model-content modal-content"> 
-          <div class="cate-header" style="background-color:  #fff; color: #000;">
-            <h4>Categorías</h4>
-          </div>
-                    <ul class="category-by-cat">
-            <li (click)="filter('hortalizas')">
-              <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
-                <div class="icon ">
-                  <img src="assets/assetssuper/images/category/icon-1.svg" alt="" class="">
-                </div>
-                <div class="text" style="color:#f55d2c"> Frutas y Hortalizas </div>
-              </a>
-            </li>
-             <li (click)="filter('carnes')">
-              <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
-                <div class="icon">
-                  <img src="assets/assetssuper/images/category/icon-10.svg" alt="">
-                </div>
-                <div class="text"> Carnes y Embutidos </div>
-              </a>
-            </li>
-            <li>
-            <li (click)="filter('viveres')">
-              <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
-                <div class="icon">
-                  <img src="assets/assetssuper/images/category/icon-2.svg" alt="">
-                </div>
-                <div class="text"> Víveres </div>
-              </a>
-            </li>
-            <li (click)="filter('lacteos')"> 
-              <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
-                <div class="icon">
-                  <img src="assets/assetssuper/images/category/icon-7.svg" alt="">
-                </div>
-                <div class="text"> Huevos y lácteos </div>
-              </a>
-            </li>
-            <li (click)="filter('bebidas')">
-              <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
-                <div class="icon">
-                  <img src="assets/assetssuper/images/category/icon-3.svg" alt="">
-                </div>
-                <div class="text"> Bebidas y licores </div>
-              </a>
-            </li>
-            <li (click)="filter('postres')">
-              <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
-                <div class="icon">
-                  <img src="assets/assetssuper/images/category/icon-5.svg" alt="">
-                </div>
-                <div class="text"> Postres </div>
-              </a>
-            </li>
-            <li (click)="filter('limpieza')">
-              <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
-                <div class="icon">
-                  <img src="assets/assetssuper/images/category/icon-6.svg" alt="">
-                </div>
-                <div class="text"> Aseo y limpieza </div>
-              </a>
-            </li>
-            <li (click)="filter('panaderia')">
-              <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
-                <div class="icon">
-                  <img src="assets/assetssuper/images/category/icon-11.svg" alt="">
-                </div>
-                <div class="text"> Panadería </div>
-              </a>
-            </li>
-            <li (click)="filter('aseopersonal')">
-              <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
-                <div class="icon">
-                  <img src="assets/assetssuper/images/category/icon-8.svg" alt="">
-                </div>
-                <div class="text"> Aseo Personal </div>
-              </a>
-            </li>
-            <li (click)="filter('mascotas')">
-              <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
-                <div class="icon">
-                  <img src="assets/assetssuper/images/category/icon-9.svg" alt="">
-                </div>
-                <div class="text"> Mascotas </div>
-              </a>
-            </li>
-                    </ul>
-         <!--  <a  class="morecate-btn"><i class="uil uil-apps"></i>Más Categorías</a> -->
+                  <div class="cate-header" style="background-color:  #fff; color: #000;">
+                    <h4>Categorías</h4>
+                  </div>
+                  <ul class="category-by-cat">
+                    <li (click)="filter('hortalizas')">
+                      <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
+                        <div class="icon ">
+                          <img src="assets/assetssuper/images/category/icon-1.svg" alt="frutme" >
+                     
+                        </div>
+                        <div class="text" style="color:#f55d2c;" [hidden]="this._uw.categorySelected!='hortalizas'"> Frutas y Hortalizas </div>
+                        <div class="text" [hidden]="this._uw.categorySelected=='hortalizas'"> Frutas y Hortalizas </div>
+                      </a>
+                    </li>
+                     <li (click)="filter('carnes')">
+                      <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
+                        <div class="icon">
+                          <img src="assets/assetssuper/images/category/icon-10.svg" alt="frutme">
+                        </div>
+                        <div class="text" style="color:#f55d2c;" [hidden]="this._uw.categorySelected!='carnes'"> Carnes y Embutidos </div>
+                          <div class="text" [hidden]="this._uw.categorySelected=='carnes'"> Carnes y Embutidos </div>
+                      </a>
+                    </li>
+                    <li>
+                    <li (click)="filter('viveres')">
+                      <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
+                        <div class="icon">
+                          <img src="assets/assetssuper/images/category/icon-2.svg" alt="frutme">
+                        </div>
+                        <div class="text" style="color:#f55d2c;"[hidden]="this._uw.categorySelected!='viveres'"> Víveres </div>
+                         <div class="text" [hidden]="this._uw.categorySelected=='viveres'"> Víveres </div>
+                      </a>
+                    </li>
+                    <li (click)="filter('lacteos')"> 
+                      <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
+                        <div class="icon">
+                          <img src="assets/assetssuper/images/category/icon-7.svg" alt="frutme">
+                        </div>
+                        <div class="text" style="color:#f55d2c;"[hidden]="this._uw.categorySelected!='lacteos'"> Huevos y lácteos </div>
+                         <div class="text" [hidden]="this._uw.categorySelected=='lacteos'"> Huevos y lácteos </div>
+                      </a>
+                    </li>
+                    <li (click)="filter('bebidas')">
+                      <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
+                        <div class="icon">
+                          <img src="assets/assetssuper/images/category/icon-3.svg" alt="frutme">
+                        </div>
+                        <div class="text"style="color:#f55d2c;"[hidden]="this._uw.categorySelected!='bebidas'"> Bebidas y licores </div>
+                         <div class="text"[hidden]="this._uw.categorySelected=='bebidas'">Bebidas y licores </div>
+                      </a>
+                    </li>
+                    <li (click)="filter('postres')">
+                      <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
+                        <div class="icon">
+                          <img src="assets/assetssuper/images/category/icon-5.svg" alt="frutme">
+                        </div>
+                        <div class="text"style="color:#f55d2c;" [hidden]="this._uw.categorySelected!='postres'"> Postres </div>
+                        <div class="text" [hidden]="this._uw.categorySelected=='postres'"> Postres </div>
+                      </a>
+                    </li>
+                    <li (click)="filter('limpieza')">
+                      <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
+                        <div class="icon">
+                          <img src="assets/assetssuper/images/category/icon-6.svg" alt="frutme">
+                        </div>
+                        <div class="text" style="color:#f55d2c;"[hidden]="this._uw.categorySelected!='limpieza'"> Aseo y limpieza </div>
+                        <div class="text" [hidden]="this._uw.categorySelected=='limpieza'"> Aseo y limpieza </div>
+                      </a>
+                    </li>
+                    <li (click)="filter('panaderia')">
+                      <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
+                        <div class="icon">
+                          <img src="assets/assetssuper/images/category/icon-11.svg" alt="frutme">
+                        </div>
+                        <div class="text" style="color:#f55d2c;"[hidden]="this._uw.categorySelected!='panaderia'"> Panadería </div>
+                         <div class="text" [hidden]="this._uw.categorySelected=='limpieza'"> Panadería </div>
+                      </a>
+                    </li>
+                    <li (click)="filter('aseopersonal')">
+                      <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
+                        <div class="icon">
+                          <img src="assets/assetssuper/images/category/icon-8.svg" alt="frutme">
+                        </div>
+                        <div class="text" style="color:#f55d2c;"[hidden]="this._uw.categorySelected!='aseopersonal'"> Aseo Personal </div>
+                          <div class="text" [hidden]="this._uw.categorySelected=='aseopersonal'"> Aseo Personal </div>
+                      </a>
+                    </li>
+                    <li (click)="filter('mascotas')">
+                      <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
+                        <div class="icon">
+                          <img src="assets/assetssuper/images/category/icon-9.svg" alt="frutme">
+                        </div>
+                        <div class="text"style="color:#f55d2c;"[hidden]="this._uw.categorySelected!='mascotas'"> Mascotas </div>
+                         <div class="text"[hidden]="this._uw.categorySelected=='mascotas'"> Mascotas </div>
+                      </a>
+                    </li>
+                  </ul>
+
                 </div>
             </div>
         </div>
@@ -118,114 +129,29 @@
                       <li >
                         <a class="single-cat-item bs-canvas-close" data-dismiss="modal" (click)=setBs()>
                           <div class="icon">
-                            <img src="assets/assetssuper/images/category/vef.svg" alt="">
+                            <img src="assets/assetssuper/images/category/vef.svg" alt="frutme">
                           </div>
                           <div class="text"> Bolivares Soberanos </div>
                         </a>
                       </li>
-                 <!--      <li>
-                        <a  class="single-cat-item bs-canvas-close" data-dismiss="modal">
-                          <div class="icon">
-                            <img src="assets/assetssuper/images/category/colp.svg" alt="">
-                          </div>
-                          <div class="text"> Pesos Colombianos </div>
-                        </a>
-                      </li> -->
+         
                       <li >
                         <a  class="single-cat-item bs-canvas-close" data-dismiss="modal" (click)=setUsd()>
                           <div class="icon">
-                            <img src="assets/assetssuper/images/category/usd.svg" alt="">
+                            <img src="assets/assetssuper/images/category/usd.svg" alt="frutme">
                           </div>
                           <div class="text"> Dolar Estadounidense </div>
                         </a>
                       </li>
                     </ul>
-        <!--   <a  class="morecate-btn"><i class="uil uil-apps"></i>Más Categorías</a> -->
+
                 </div>
             </div>
         </div>
     </div>
   <!-- Category Model End-->
 
-  <!-- Search Model Start-->
-<!--   <div id="search_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
-        <div class="modal-dialog search-ground-area" role="document">
-            <div class="category-area-inner">
-                <div class="modal-header">
-                    <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
-            <i class="uil uil-multiply"></i>
-                    </button>
-                </div>
-                <div class="category-model-content modal-content"> 
-          <div class="search-header">
-            <form action="#">
-              <input type="search" placeholder="Buscar producto...">
-              <button type="submit"><i class="uil uil-search"></i></button>
-            </form>
-          </div>
-          <div class="search-by-cat">
-                        <a href="#" class="single-cat">
-                            <div class="icon">
-                <img src="assets/assetssuper/images/category/icon-1.svg" alt="">
-                            </div>
-                            <div class="text">
-                                Fruits and Vegetables
-                            </div>
-                        </a>
-            <a href="#" class="single-cat">
-              <div class="icon">
-                <img src="assets/assetssuper/images/category/icon-2.svg" alt="">
-              </div>
-              <div class="text"> Grocery & Staples </div>
-            </a>
-            <a href="#" class="single-cat">
-              <div class="icon">
-                <img src="assets/assetssuper/images/category/icon-3.svg" alt="">
-              </div>
-              <div class="text"> Dairy & Eggs </div>
-            </a>
-            <a href="#" class="single-cat">
-              <div class="icon">
-                <img src="assets/assetssuper/images/category/icon-4.svg" alt="">
-              </div>
-              <div class="text"> Beverages </div>
-            </a>
-            <a href="#" class="single-cat">
-              <div class="icon">
-                <img src="assets/assetssuper/images/category/icon-5.svg" alt="">
-              </div>
-              <div class="text"> Snacks </div>
-            </a>
-            <a href="#" class="single-cat">
-              <div class="icon">
-                <img src="assets/assetssuper/images/category/icon-6.svg" alt="">
-              </div>
-              <div class="text"> Home Care </div>
-            </a>
-            <a href="#" class="single-cat">
-              <div class="icon">
-                <img src="assets/assetssuper/images/category/icon-7.svg" alt="">
-              </div>
-              <div class="text"> Noodles & Sauces </div>
-            </a>
-            <a href="#" class="single-cat">
-              <div class="icon">
-                <img src="assets/assetssuper/images/category/icon-8.svg" alt="">
-              </div>
-              <div class="text"> Personal Care </div>
-            </a>
-            <a href="#" class="single-cat">
-              <div class="icon">
-                <img src="assets/assetssuper/images/category/icon-9.svg" alt="">
-              </div>
-              <div class="text"> Pet Care </div>
-            </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-  <!-- Search Model End-->
+ 
   <!-- Cart Sidebar Offset Start-->
   <div class="bs-canvas bs-canvas-left position-fixed bg-cart h-100">
     <div class="bs-canvas-header side-cart-header p-3 ">
@@ -253,7 +179,7 @@
       <div class="side-cart-items">
         <div class="cart-item bs-canvas-close" data-dismiss="modal">
           <div class="cart-product-img">
-            <img src="assets/assetssuper/images/product/img-1.jpg" alt="">
+            <img src="assets/assetssuper/images/product/img-1.jpg" alt="frutme">
             <div class="offer-badge">6% MENOS</div>
           </div>
           <div class="cart-text">
@@ -292,7 +218,7 @@
         </div>
         <div class="cart-item bs-canvas-close" data-dismiss="modal">
           <div class="cart-product-img">
-            <img src="assets/assetssuper/images/product/img-2.jpg" alt="">
+            <img src="assets/assetssuper/images/product/img-2.jpg" alt="frutme">
             <div class="offer-badge">6% MENOS</div>
           </div>
           <div class="cart-text">
@@ -336,7 +262,7 @@
         <span>$35</span>
       </div>
       <div class="checkout-cart">
-        <!-- <a href="#" class="promo-code">Have a promocode?</a> -->
+
         <a href="#" class="cart-checkout-btn hover-btn">Prcesar compra</a>
       </div>
     </div>
@@ -347,75 +273,72 @@
     <div class="top-header-group">
       <div class="top-header">
         <div class="res_main_logo">
-          <a href="index.html"><img src="assets/assetssuper/images/logo.png" alt=""></a>
+          <a href="index.html"><img src="assets/assetssuper/images/logo.png" alt="frutme"></a>
         </div>
         <div class="main_logo" id="logo">
-          <a href="index.html"><img src="assets/assetssuper/images/logo.png" alt=""></a>
-          <a href="index.html"><img class="logo-inverse" src="assets/assetssuper/images/logo.png" alt=""></a>
+          <a href="index.html"><img src="assets/assetssuper/images/logo.png" alt="frutme"></a>
+          <a href="index.html"><img class="logo-inverse" src="assets/assetssuper/images/logo.png" alt="frutme"></a>
         </div>
-          <div class="catey__icon" style="margin-right: -27px;margin-left: 100px; ">
-          <a href="#" class="cate__btn" data-toggle="modal" data-target="#category_model" title="Categorias">  <img src="assets/assetssuper/images/category/icon-1.svg" alt="" style="width: 30px;"></a>
-           <!-- style="padding-left: 41px;font-size: 31px;color: #f55d2c;" -->
+        <div class="catey__icon" style="margin-right: -27px;margin-left: 100px; ">
+          <a href="#" class="cate__btn" data-toggle="modal" data-target="#category_model" title="Categorias">  
+            <img src="assets/assetssuper/images/category/icon-1.svg" [hidden]="this._uw.categorySelected!='hortalizas'" alt="frutme" style="width: 30px;">
+            <img src="assets/assetssuper/images/category/icon-3.svg" alt="frutme" [hidden]="this._uw.categorySelected!='bebidas'"style="width: 30px;">
+            <img src="assets/assetssuper/images/category/icon-11.svg" alt="frutme" [hidden]="this._uw.categorySelected!='panaderia'"style="width: 30px;">
+            <img src="assets/assetssuper/images/category/icon-5.svg" alt="frutme" [hidden]="this._uw.categorySelected!='postres'"style="width: 30px;">
+            <img src="assets/assetssuper/images/category/icon-6.svg" alt="frutme" [hidden]="this._uw.categorySelected!='limpieza'"style="width: 30px;">
+            <img src="assets/assetssuper/images/category/icon-7.svg" alt="frutme" [hidden]="this._uw.categorySelected!='lacteos'"style="width: 30px;">
+            <img src="assets/assetssuper/images/category/icon-8.svg" alt="frutme" [hidden]="this._uw.categorySelected!='aseopersonal'"style="width: 30px;">
+            <img src="assets/assetssuper/images/category/icon-9.svg" alt="frutme" [hidden]="this._uw.categorySelected!='mascotas'"style="width: 30px;">
+            <img src="assets/assetssuper/images/category/icon-10.svg" alt="frutme"[hidden]="this._uw.categorySelected!='carnes'"style="width: 30px;">
+
+          </a>
+           <!-- style="padding-left: 41px;font-size: 31px;color: #f55d2c;;" -->
         </div>
-       <!--  <div class="select_location" style="margin-right: -27px;margin-left: 44px; ">
-          <div class="ui inline dropdown loc-title">
-            <div class="text">
-              <i class="uil uil-location-point"></i>
-              Merida
-            </div>
-            <i class="uil uil-angle-down icon__14"></i>
-            <div class="menu dropdown_loc">
-              <div class="item channel_item bs-canvas-close" data-dismiss="modal">
-                <i class="uil uil-location-point"></i>
-                Merida
-              </div>
-              <div class="item channel_item bs-canvas-close" data-dismiss="modal">
-                <i class="uil uil-location-point"></i>
-                Ejido
-              </div>
-            </div>
-          </div>
-        </div> -->
-<!--         <div class="search120">
-          <div class="ui search">
-            <div class="ui left icon input swdh10">
-            <input class="prompt srch10" type="text" placeholder="Buscar producto..">
-            <i class='uil uil-search-alt icon icon1'></i>
-            </div>
-          </div>
-        </div> -->
+
         <div class="header_right">
-   <!--        <div class="ui dropdown">
-          <a href="#" class="category_drop hover-btn" data-toggle="modal" data-target="#category_model" title="Categories"><i class="uil uil-apps"></i><span class="cate__icon">Categorías</span></a>
-        </div> -->
+
           <ul>
             <li>
               <a href="#" class="offer-link">+58<i class="uil uil-phone-alt"></i>414-752-9202</a>
             </li>
             <li>
-              <a href="#" class="category_drop hover-btn" data-toggle="modal" data-target="#category_model" title="Categories"><img src="assets/assetssuper/images/category/icon-1.svg" alt="" style="width: 30px;"><span class="cate__icon">Categorías</span></a>
+              <a href="#" class="category_drop hover-btn" data-toggle="modal" data-target="#category_model" title="Categories">
+                <img src="assets/assetssuper/images/category/icon-1.svg" alt="frutme" alt="frutme" [hidden]="this._uw.categorySelected!='hortalizas'"style="width: 30px;">
+                 <img src="assets/assetssuper/images/category/icon-2.svg" alt="frutme" [hidden]="this._uw.categorySelected!='viveres'"style="width: 30px;">
+                <img src="assets/assetssuper/images/category/icon-3.svg" alt="frutme" [hidden]="this._uw.categorySelected!='bebidas'"style="width: 30px;">
+                <img src="assets/assetssuper/images/category/icon-11.svg" alt="frutme" [hidden]="this._uw.categorySelected!='panaderia'"style="width: 30px;">
+                <img src="assets/assetssuper/images/category/icon-5.svg" alt="frutme" [hidden]="this._uw.categorySelected!='postres'"style="width: 30px;">
+                <img src="assets/assetssuper/images/category/icon-6.svg" alt="frutme" [hidden]="this._uw.categorySelected!='limpieza'"style="width: 30px;">
+                <img src="assets/assetssuper/images/category/icon-7.svg" alt="frutme" [hidden]="this._uw.categorySelected!='lacteos'"style="width: 30px;">
+                <img src="assets/assetssuper/images/category/icon-8.svg" alt="frutme" [hidden]="this._uw.categorySelected!='aseopersonal'"style="width: 30px;">
+                <img src="assets/assetssuper/images/category/icon-9.svg" alt="frutme" [hidden]="this._uw.categorySelected!='mascotas'"style="width: 30px;">
+                <img src="assets/assetssuper/images/category/icon-10.svg" alt="frutme"[hidden]="this._uw.categorySelected!='carnes'"style="width: 30px;">
+
+
+
+                <span class="cate__icon">Categorías</span></a>
             </li>
             <li>
-              <!-- <a href="faq.html" class="offer-link"><i class="uil uil-question-circle"></i>Help</a> -->
+  
             </li>
              
             <li style="margin-right:  -27px;" class=" pull-bs-canvas-left">
               <a href="#" class="option_links" >
-                <i class='uil uil-shopping-cart-alt  ' style="color: #f55d2c; font-size: 38px;"></i><span class="noti_count1 pull-bs-canvas-left blob" style="background: #059d00;font-size: 14px; z-index:999999999;"  >13</span>
+                <i class='uil uil-shopping-cart-alt  ' style="color: #f55d2c;; font-size: 38px;"></i><span class="noti_count1 pull-bs-canvas-left blob" style="background: #059d00;font-size: 14px; z-index:999999999;"  >13</span>
               </a>
       
             </li>  
           
             <li class="ui dropdown" *ngIf="this._uw.info[0]">
               <a href="#" class="opts_account"  [hidden]="this._uw.currency==this._uw.info[0].bs" (click)=setBs()>
-                <img src="assets/assetssuper/images/avatar/img-5.jpg" alt="" >
+                <img src="assets/assetssuper/images/avatar/img-5.jpg" alt="frutme" >
                 <span > </span>
                 <i class="uil uil-angle-down"></i>
               </a>
 
               
                <a href="#" class="opts_account"  [hidden]="this._uw.currency==this._uw.info[0].usd " (click)=setUsd()>
-                <img src="assets/assetssuper/images/avatar/img-8.jpg" alt="" >
+                <img src="assets/assetssuper/images/avatar/img-8.jpg" alt="frutme" >
                 <span >  </span>
                 <i class="uil uil-angle-down"></i>
               </a>
@@ -440,59 +363,7 @@
     </div>
     <div class="sub-header-group">
       <div class="sub-header">
-        <!-- <div class="ui dropdown">
-          <a href="#" class="category_drop hover-btn" data-toggle="modal" data-target="#category_model" title="Categories"><i class="uil uil-apps"></i><span class="cate__icon">Categorías</span></a>
-        </div> -->
-     <!--    <nav class="navbar navbar-expand-lg navbar-light py-3">
-          <div class="container-fluid">
-            <button class="navbar-toggler menu_toggle_btn" type="button" data-target="#navbarSupportedContent"><i class="uil uil-bars"></i></button>
-            <div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
-              <ul class="navbar-nav main_nav align-self-stretch">
-                <li class="nav-item bs-canvas-close" data-dismiss="modal"><a href="index.html" class="nav-link active" title="Home">Home</a></li>
-                <li class="nav-item bs-canvas-close" data-dismiss="modal"><a href="shop_grid.html" class="nav-link new_item bs-canvas-close" data-dismiss="modal" title="New Products">New Products</a></li>
-                <li class="nav-item bs-canvas-close" data-dismiss="modal"><a href="shop_grid.html" class="nav-link" title="Featured Products">Featured Products</a></li>
-                <li class="nav-item bs-canvas-close" data-dismiss="modal">
-                  <div class="ui icon top left dropdown nav__menu">
-                    <a class="nav-link" title="Pages">Pages <i class="uil uil-angle-down"></i></a>
-                    <div class="menu dropdown_page">
-                      <a href="dashboard_overview.html" class="item channel_item page__links">Account</a>
-                      <a href="about_us.html" class="item channel_item page__links">About Us</a>
-                      <a href="shop_grid.html" class="item channel_item page__links">Shop Grid</a>
-                      <a href="single_product_view.html" class="item channel_item page__links">Single Product View</a>
-                      <a href="checkout.html" class="item channel_item page__links">Checkout</a>
-                      <a href="request_product.html" class="item channel_item page__links">Product Request</a>                    
-                      <a href="order_placed.html" class="item channel_item page__links">Order Placed</a>                    
-                      <a href="bill.html" class="item channel_item page__links">Bill Slip</a>                   
-                      <a href="sign_in.html" class="item channel_item page__links">Sign In</a>
-                      <a href="sign_up.html" class="item channel_item page__links">Sign Up</a>
-                      <a href="forgot_password.html" class="item channel_item page__links">Forgot Password</a>
-                      <a href="contact_us.html" class="item channel_item page__links">Contact Us</a>
-                    </div>
-                  </div>
-                </li>
-                <li class="nav-item bs-canvas-close" data-dismiss="modal">
-                  <div class="ui icon top left dropdown nav__menu">
-                    <a class="nav-link" title="Blog">Blog <i class="uil uil-angle-down"></i></a>
-                    <div class="menu dropdown_page">
-                      <a href="our_blog.html" class="item channel_item page__links">Our Blog</a>
-                      <a href="blog_detail_view.html" class="item channel_item page__links">Blog Detail View</a>
-                    </div>
-                  </div>
-                </li> 
-                <li class="nav-item bs-canvas-close" data-dismiss="modal"><a href="contact_us.html" class="nav-link" title="Contact">Contact Us</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav> -->
-      <!--   <div class="catey__icon">
-          <a href="#" class="cate__btn" data-toggle="modal" data-target="#category_model" title="Categories"><i class="uil uil-apps"></i></a>
-        </div> -->
-<!--         <div class="header_cart order-1">
-          <a href="#" class="cart__btn hover-btn " title="Cart"><span>Total</span><ins>$USD 22</ins><i class="uil uil-angle-down"></i></a>
-        </div> -->
-      <!--   <div class="search__icon order-1">
-          <a href="#" class="search__btn hover-btn" data-toggle="modal" data-target="#search_model" title="Search"><i class="uil uil-search"></i></a>
-        </div> -->
+     
       </div>
     </div>
   </header>

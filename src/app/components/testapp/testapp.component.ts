@@ -14,9 +14,6 @@ export class TestappComponent implements OnInit {
    public _uw:UserWService,
   private dataApi: DataApiService
      ) { }
-   // loadAPI = null;  
-   // url="assets/assetsfruit/js/jquery.parallax-scroll.js";
-   // url2 = "assets/assetsfruit/js/scripts.js";
      public tixs:TixInterface;
   getAllTixsInitload(){
     this.dataApi
@@ -70,31 +67,7 @@ plus(index){
      this.getAllTixsInitload();
      this._uw.categorySelected="hortalizas";
 
-  
-    // this._uw.tixPreview.quantity=1;
- // if (this._uw.loaded==true){
- //          this.loadAPI = new Promise(resolve => {
- //            this.loadScript();
- //            this.loadScript2();
- //          });
- //        }
- //        this._uw.loaded=true;
   }
-    //   public loadScript() {
-    //   let node = document.createElement("script");
-    //   node.src = this.url;
-    //   node.type = "text/javascript";
-    //   node.async = true;
-    //   node.charset = "utf-8";
-    //   document.getElementsByTagName("head")[0].appendChild(node);
-    // }
-    //     public loadScript2() {
-    //   let node = document.createElement("script");
-    //   node.src = this.url2;
-    //   node.type = "text/javascript";
-    //   node.async = true;
-    //   node.charset = "utf-8";
-    //   document.getElementsByTagName("head")[0].appendChild(node);
-    // }
+
 
 }
