@@ -12,21 +12,23 @@
 								<a href="#" class="product-img">
 									<img src="{{tix.images[0]}}" alt="">
 									<div class="product-absolute-options">
-										<span class="offer-badge-2" [hidden]="!tix.stockStatus">Disponible</span>
-										<span class="offer-badge-1" [hidden]="tix.stockStatus">Agotado</span>
-										<!-- <span class="like-icon" title="wishlist"></span> -->
+										<span class="offer-badge-2" [hidden]="!tix.initload" style="color: black;background-color: yellow;">Oferta</span>
 									
 									</div>
 								</a>
-								<div class="product-text-dt" *ngIf="this._uw.info[0]" style="padding-top:5px;">
+								<div class="product-text-dt" *ngIf="this._uw.info[0]" style="padding-top:5px;" >
 									<h4>{{tix.productName}}</h4>
 									<!-- <p>Disponible<span>(14 Kg En Stock)</span></p> -->
 									<div class="product-price" [hidden]="this._uw.currency==this._uw.info[0].bs"><span  style="color:#000; text-transform: none !important; font-weight: normal; text-decoration: none; font-size: 12px; ">$USD </span>{{tix.globalPrice*this._uw.currency |  number:'1.0-2' }}
 									</div>
 									<div class="product-price"  [hidden]="this._uw.currency==this._uw.info[0].usd "><span  style="color:#000; text-transform: none !important; font-weight: normal; text-decoration: none; font-size: 12px; ">BsS.</span> {{tix.globalPrice*this._uw.currency |  number:'1.0-0' }}
 									</div>
+									<div>
+										
+									<span class="offer-badge-1" [hidden]="tix.stockStatus">Agotado</span> 
+									</div>
 									 
-									<div class="qty-cart">
+									<div class="qty-cart" [hidden]="!tix.stockStatus">
 										<div class="quantity buttons_added">
 											<input type="button" value="-" class="minus minus-btn" (click)=minus(i)>
 											<!-- <input type="number" step="1" name="quantity" value="1" class="input-text qty text"> -->
@@ -61,13 +63,11 @@
 								<a href="#" class="product-img">
 									<img src="{{tix.images[0]}}" alt="">
 									<div class="product-absolute-options">
-										<span class="offer-badge-2" [hidden]="!tix.stockStatus">Disponible</span>
-										<span class="offer-badge-1" [hidden]="tix.stockStatus">Agotado</span>
-										<!-- <span class="like-icon" title="wishlist"></span> -->
+										<span class="offer-badge-2" [hidden]="!tix.initload" style="color: black;background-color: yellow;">Oferta</span>
 									
 									</div>
 								</a>
-								<div class="product-text-dt" *ngIf="this._uw.info[0]" style="padding-top:5px;">
+								<div class="product-text-dt" *ngIf="this._uw.info[0]" style="padding-top:5px;"  >
 									<h4>{{tix.productName}}</h4>
 
 									<!-- <p>Disponible<span>(14 Kg En Stock)</span></p> -->
@@ -75,8 +75,11 @@
 									</div>
 									<div class="product-price"  [hidden]="this._uw.currency==this._uw.info[0].usd "><span  style="color:#000; text-transform: none !important; font-weight: normal; text-decoration: none; font-size: 12px; ">BsS.</span> {{tix.globalPrice*this._uw.currency |  number:'1.0-0' }}
 									</div>
-									 
-									<div class="qty-cart">
+									<div>
+										
+									<span class="offer-badge-1" [hidden]="tix.stockStatus">Agotado</span> 
+									</div>
+									<div class="qty-cart" [hidden]="!tix.stockStatus">
 										<div class="quantity buttons_added">
 											<input type="button" value="-" class="minus minus-btn" (click)=minus(i)>
 											<!-- <input type="number" step="1" name="quantity" value="1" class="input-text qty text"> -->

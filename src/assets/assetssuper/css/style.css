@@ -2060,14 +2060,14 @@ span.like-icon {
     text-transform: uppercase
 }
 .offer-badge-1 {
-    position: absolute;
+    position: initial;
     top: 10px;
     left: 10px;
     font-size: 10px;
     font-weight: 700;
     color: #fff;
     background: red;
-    padding: 1px 10px 0px;
+    padding: 8px 10px 7px;
     border-radius: 3px;
     line-height: 20px;
     text-transform: uppercase
