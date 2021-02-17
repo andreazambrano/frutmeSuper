@@ -82,10 +82,12 @@ export class FruittopbarComponent implements OnInit {
       if(met=="paypal"){
         this._uw.comision=this._uw.info[0].paypal;
         this._uw.paypal=true;
+        this._uw.zelle=false;
       }
       if(met=="zelle"){
         this._uw.comision=this._uw.info[0].zelle;
         this._uw.zelle=true;
+             this._uw.paypal=false;
       }
 
     }
