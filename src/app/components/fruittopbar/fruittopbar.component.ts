@@ -79,9 +79,21 @@ export class FruittopbarComponent implements OnInit {
     let met = method;
     if(met=="zelle" || met=="paypal" || met=="efectivo"){
       this.setUsd();
+      if(met=="paypal"){
+        this._uw.comision=this._uw.info[0].paypal;
+        this._uw.paypal=true;
+      }
+      if(met=="zelle"){
+        this._uw.comision=this._uw.info[0].zelle;
+        this._uw.zelle=true;
+      }
+
     }
       if(met=="pagomovil" || met=="bstransferencia"){
       this.setBs();
+      this._uw.comision=0;
+      this._uw.paypal=false;
+       this._uw.zelle=false;
     }
   }
 

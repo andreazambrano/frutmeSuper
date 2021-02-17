@@ -316,13 +316,18 @@
     </div>
     <div class="bs-canvas-footer" *ngIf="this._uw.info[0]"> 
       <div class="cart-total-dil saving-total ">
-        <!-- <h4>Total cargos</h4>
-        <span>$1</span> -->
+        <h4 [hidden]="this._uw.currency==this._uw.info[0].bs || !this._uw.paypal ">Comisión PayPal</h4>
+        <span>{{(_uw.total*this._uw.comision/100)*this._uw.currency | number: '1.0-2'}}</span>
+      </div>
+      <div class="cart-total-dil saving-total ">
+        <h4 [hidden]="this._uw.currency==this._uw.info[0].bs || !this._uw.zelle ">Comisión Zelle</h4>
+        <span>{{(_uw.total*this._uw.comision/100)*this._uw.currency | number: '1.0-2'}}</span>
       </div>
       <div class="main-total-cart">
-        <h2>Total</h2>
+        <h2 [hidden]="this._uw.currency==this._uw.info[0].usd ">Total BsS</h2>
+        <h2 [hidden]="this._uw.currency==this._uw.info[0].bs ">Total $USD</h2>
         
-        <span [hidden]="this._uw.currency==this._uw.info[0].bs ">{{_uw.total*this._uw.currency | number: '1.0-2'}}</span>
+        <span [hidden]="this._uw.currency==this._uw.info[0].bs ">{{((_uw.total*_uw.comision/100)+_uw.total)*this._uw.currency | number: '1.0-2'}}</span>
         <span  [hidden]="this._uw.currency==this._uw.info[0].usd ">{{_uw.total *this._uw.currency | number: '1.0-0'}}</span>
       </div>
       <div class="checkout-cart">
