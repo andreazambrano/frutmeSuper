@@ -112,6 +112,11 @@ cartCalculate(){
         this._uw.zelle=true;
              this._uw.paypal=false;
       }
+       if(met=="efectivo"){
+        this._uw.comision=0;
+        this._uw.zelle=false;
+             this._uw.paypal=false;
+      }
 
     }
       if(met=="pagomovil" || met=="bstransferencia"){
