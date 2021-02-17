@@ -17,6 +17,7 @@
                         <div class="icon ">
                           <img src="assets/assetssuper/images/category/icon-1.svg" alt="frutme" >
                      
+
                         </div>
                         <div class="text" style="color:#f55d2c;" [hidden]="this._uw.categorySelected!='hortalizas'"> Frutas y Hortalizas </div>
                         <div class="text" [hidden]="this._uw.categorySelected=='hortalizas'"> Frutas y Hortalizas </div>
@@ -155,66 +156,141 @@
   <!-- Cart Sidebar Offset Start-->
   <div class="bs-canvas bs-canvas-left position-fixed bg-cart h-100">
     <div class="bs-canvas-header side-cart-header p-3 ">
-      <div class="d-inline-block  main-cart-title">Mi Carrito <span>({{_uw.numProd}}  productos)</span></div>
+      <div class="d-inline-block  main-cart-title">Mi Carrito <span>({{_uw.numProd}}  productos)</span>
+      <!--    <li class="ui dropdown" *ngIf="this._uw.info[0]">
+              <a href="#" class="opts_account"  [hidden]="this._uw.currency==this._uw.info[0].bs" (click)=setBs()>
+                <img src="assets/assetssuper/images/avatar/img-5.jpg" alt="frutme" >
+                <span > </span>
+                <i class="uil uil-angle-down"></i>
+              </a>
+
+              
+               <a href="#" class="opts_account"  [hidden]="this._uw.currency==this._uw.info[0].usd " (click)=setUsd()>
+                <img src="assets/assetssuper/images/avatar/img-8.jpg" alt="frutme" >
+                <span >  </span>
+                <i class="uil uil-angle-down"></i>
+              </a>
+
+
+
+              <div class="menu dropdown_account">
+                <div class="night_mode_switch__btn">
+                  <a href="#" id="night-mode" class="btn-night-mode">
+                    <i class="uil uil-moon"></i> 
+                    <span class="btn-night-mode-switch">
+                      <span class="uk-switch-button"></span>
+                    </span>
+                  </a>
+                </div>  
+                
+              </div>
+            </li> -->
+
+      </div>
       <button type="button" class="bs-canvas-close close" aria-label="Close"><i class="uil uil-multiply"></i></button>
     </div> 
-    <div class="bs-canvas-body">
-      <div class="cart-top-total">
-        <div class="cart-total-dil">
+
+<div class="bs-canvas-body" [hidden]="_uw.feet!=1">
+     <div class="cart-top-total">
+     <!--    <div class="cart-total-dil">
           <h4>Cargo por peso extra
           </h4>
-          <span>$1</span>
-        </div>
+          <span>0</span>
+        </div> -->
         <div class="cart-total-dil">
           <h4>Moneda: 
           </h4>
+         
         <span [hidden]="_uw.currency!=1">BsS.</span>
           <span [hidden]="_uw.currency==1">USD ({{1/_uw.currency |  number:'1.0-2'}} BsS.)</span>
+
         </div>
-        <div class="cart-total-dil pt-2">
+      <!--   <div class="cart-total-dil pt-2">
           <h4>Cargos por Delivery</h4>
           <span>0</span>
+        </div> -->
+      </div>
+
+ <!--      <h4>Método de pago</h4>
+            <div class="cart-radio">
+              <ul class="kggrm-now">
+                <li>
+                  <input type="radio" id="a1" name="cart1"  (click)=setMethod(zelle)>
+                  <label for="a1">Zelle</label>
+                </li>
+                <li>
+                  <input type="radio" id="a2" name="cart1"  (click)=setMethod(paypal)>
+                  <label for="a2">Paypal</label>
+                </li>
+                <li>
+                  <input type="radio" id="a3" name="cart1"  (click)=setMethod(efectivo)>
+                  <label for="a3">USD Efectivo</label>
+                </li>
+                <li>
+                  <input type="radio" id="a4" name="cart1"  (click)=setMethod(bstransferencia)>
+                  <label for="a4">BsS Transferencia</label>
+                </li>
+                <li>
+                  <input type="radio" id="a4" name="cart1"  (click)=setMethod(pagomovil)>
+                  <label for="a4">BsS Pago Móvil</label>
+                </li>
+              </ul>
+            </div> -->
+
+
+
+      <div class="add-address-form">
+           <div class="product-sort">
+        <div class="ui selection dropdown vchrt-dropdown">
+          <input name="gender" type="hidden" value="default">
+          <i class="dropdown icon d-icon"></i>
+          <div class="text">Método de pago</div>
+          <div class="menu">
+            <div class="item" data-value="0" (click)="setMethod(zelle)">USD Zelle</div>
+            <div class="item" data-value="1" (click)="setMethod(paypal)">USD PayPal</div>
+            <div class="item" data-value="2" (click)="setMethod(efectivo)">USD Efectivo</div>
+            <div class="item" data-value="3" (click)="setMethod(pagomovil)">BsS Pago móvil</div>
+            <div class="item" data-value="4" (click)="setMethod(bstransferencia)">BsS Transferencia</div>
+          </div>
         </div>
       </div>
+      <div class="form-group">
+        <label class="control-label">Nombre persona de contacto</label>
+        <input id="personaContacto" name="flat" type="text" placeholder="Persona de contacto" class="form-control input-md" required="">
+      </div>
+      <div class="form-group">
+        <label class="control-label">Teléfono de contacto</label>
+        <input id="telefono" name="flat" type="text" placeholder="Teléfono" class="form-control input-md" required="">
+      </div>
+      <div class="form-group">
+        <label class="control-label">Email</label>
+        <input id="email" name="flat" type="email" placeholder="Email" class="form-control input-md" required="">
+      </div>
+      <div class="form-group">
+        <label class="control-label">Dirección</label>
+        <input id="direccion" name="flat" type="text" placeholder="Dirección" class="form-control input-md" required="">
+      </div>
+    </div>
+</div>
+
+
+    <div class="bs-canvas-body" [hidden]="_uw.feet!=0">
+   
       <div class="side-cart-items">
 
 
         <div class="cart-item bs-canvas-close" data-dismiss="modal"  *ngFor="let tix of _uw.car;let i = index">
           <div class="cart-product-img">
               <img src="{{tix.images[0]}}" alt="">
-           <!--  <img src="assets/assetssuper/images/product/img-1.jpg" alt="frutme"> -->
-            <!-- <div class="offer-badge">6% MENOS</div> -->
+   
           </div>
           <div class="cart-text">
             <h4 >{{tix.productName}}</h4>
             <h4 [hidden]="this._uw.currency==this._uw.info[0].bs">{{tix.quantity}}({{tix.presentacion}}) x {{tix.globalPrice*this._uw.currency |  number:'1.0-2' }}</h4>
               <h4 [hidden]="this._uw.currency==this._uw.info[0].usd ">{{tix.quantity}}({{tix.presentacion}}) x {{tix.globalPrice*this._uw.currency |  number:'1.0-0' }}</h4>
-          <!--   <div class="cart-radio">
-              <ul class="kggrm-now">
-                <li>
-                  <input type="radio" id="a1" name="cart1">
-                  <label for="a1">0.50</label>
-                </li>
-                <li>
-                  <input type="radio" id="a2" name="cart1">
-                  <label for="a2">1kg</label>
-                </li>
-                <li>
-                  <input type="radio" id="a3" name="cart1">
-                  <label for="a3">2kg</label>
-                </li>
-                <li>
-                  <input type="radio" id="a4" name="cart1">
-                  <label for="a4">3kg</label>
-                </li>
-              </ul>
-            </div> -->
+    
             <div style="margin-top: 10px; margin-right: 1px; text-align:right;">
-            <!--   <div class="quantity buttons_added">
-                <input type="button" value="-" class="minus minus-btn">
-                <input type="number" step="1" name="quantity" value="1" class="input-text qty text">
-                <input type="button" value="+" class="plus plus-btn">
-              </div> -->
+      
               <div >
                 <span style="color:#005e58;">Subtotal = </span>
                <span class="cart-item-price" [hidden]="this._uw.currency==this._uw.info[0].bs">{{tix.globalPrice*tix.quantity*this._uw.currency |  number:'1.0-2'}}
@@ -230,19 +306,21 @@
         
       </div>
     </div>
-    <div class="bs-canvas-footer">
+    <div class="bs-canvas-footer" *ngIf="this._uw.info[0]"> 
       <div class="cart-total-dil saving-total ">
-        <h4>Total cargos</h4>
-        <span>$1</span>
+        <!-- <h4>Total cargos</h4>
+        <span>$1</span> -->
       </div>
       <div class="main-total-cart">
         <h2>Total</h2>
+        
         <span [hidden]="this._uw.currency==this._uw.info[0].bs ">{{_uw.total*this._uw.currency | number: '1.0-2'}}</span>
         <span  [hidden]="this._uw.currency==this._uw.info[0].usd ">{{_uw.total *this._uw.currency | number: '1.0-0'}}</span>
       </div>
       <div class="checkout-cart">
 
-        <a href="#" class="cart-checkout-btn hover-btn">Prcesar compra</a>
+        <a (click)="procesar()" class="cart-checkout-btn hover-btn" [hidden]="_uw.feet!=0"  style="color: white;" >Procesar compra</a>
+        <a (click)="atras()" class="cart-checkout-btn hover-btn" style="color: white;" [hidden]="_uw.feet!=1">Atrás</a>
       </div>
     </div>
   </div>
@@ -260,16 +338,16 @@
         </div>
         <div class="catey__icon" style="margin-right: -27px;margin-left: 100px; ">
           <a href="#" class="cate__btn" data-toggle="modal" data-target="#category_model" title="Categorias">  
-            <img src="assets/assetssuper/images/category/icon-1.svg" [hidden]="this._uw.categorySelected!='hortalizas'" alt="frutme" style="width: 45px;">
-             <img src="assets/assetssuper/images/category/icon-2.svg" alt="frutme" [hidden]="this._uw.categorySelected!='viveres'"style="width: 45px;">
-            <img src="assets/assetssuper/images/category/icon-3.svg" alt="frutme" [hidden]="this._uw.categorySelected!='bebidas'"style="width: 45px;">
-            <img src="assets/assetssuper/images/category/icon-11.svg" alt="frutme" [hidden]="this._uw.categorySelected!='panaderia'"style="width: 45px;">
-            <img src="assets/assetssuper/images/category/icon-5.svg" alt="frutme" [hidden]="this._uw.categorySelected!='postres'"style="width: 45px;">
-            <img src="assets/assetssuper/images/category/icon-6.svg" alt="frutme" [hidden]="this._uw.categorySelected!='limpieza'"style="width: 45px;">
-            <img src="assets/assetssuper/images/category/icon-7.svg" alt="frutme" [hidden]="this._uw.categorySelected!='lacteos'"style="width: 45px;">
-            <img src="assets/assetssuper/images/category/icon-8.svg" alt="frutme" [hidden]="this._uw.categorySelected!='aseopersonal'"style="width: 45px;">
-            <img src="assets/assetssuper/images/category/icon-9.svg" alt="frutme" [hidden]="this._uw.categorySelected!='mascotas'"style="width: 45px;">
-            <img src="assets/assetssuper/images/category/icon-10.svg" alt="frutme"[hidden]="this._uw.categorySelected!='carnes'"style="width: 45px;">
+            <img src="assets/assetssuper/images/category/icon-1.svg" [hidden]="this._uw.categorySelected!='hortalizas'" alt="frutme" style="width: 30px;">
+             <img src="assets/assetssuper/images/category/icon-2.svg" alt="frutme" [hidden]="this._uw.categorySelected!='viveres'"style="width: 30px;">
+            <img src="assets/assetssuper/images/category/icon-3.svg" alt="frutme" [hidden]="this._uw.categorySelected!='bebidas'"style="width: 30px;">
+            <img src="assets/assetssuper/images/category/icon-11.svg" alt="frutme" [hidden]="this._uw.categorySelected!='panaderia'"style="width: 30px;">
+            <img src="assets/assetssuper/images/category/icon-5.svg" alt="frutme" [hidden]="this._uw.categorySelected!='postres'"style="width: 30px;">
+            <img src="assets/assetssuper/images/category/icon-6.svg" alt="frutme" [hidden]="this._uw.categorySelected!='limpieza'"style="width: 30px;">
+            <img src="assets/assetssuper/images/category/icon-7.svg" alt="frutme" [hidden]="this._uw.categorySelected!='lacteos'"style="width: 30px;">
+            <img src="assets/assetssuper/images/category/icon-8.svg" alt="frutme" [hidden]="this._uw.categorySelected!='aseopersonal'"style="width: 30px;">
+            <img src="assets/assetssuper/images/category/icon-9.svg" alt="frutme" [hidden]="this._uw.categorySelected!='mascotas'"style="width: 30px;">
+            <img src="assets/assetssuper/images/category/icon-10.svg" alt="frutme"[hidden]="this._uw.categorySelected!='carnes'"style="width: 30px;">
 
           </a>
            <!-- style="padding-left: 41px;font-size: 31px;color: #f55d2c;;" -->

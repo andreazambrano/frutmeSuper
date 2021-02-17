@@ -68,15 +68,29 @@ export class FruittopbarComponent implements OnInit {
       if (res[0] === undefined){
         return
         }else{
+
           this.tixs=res[0];
 
          this._uw.totalTixs = res.length;
         }
       });
   }
+  setMethod(method){
+    let met = method;
+    if(met=="zelle" || met=="paypal" || met=="efectivo"){
+      this.setUsd();
+    }
+      if(met=="pagomovil" || met=="bstransferencia"){
+      this.setBs();
+    }
+  }
 
- 
-
+ procesar(){
+  this._uw.feet=1;
+ }
+atras(){
+  this._uw.feet=0;
+}
 
   ngOnInit() {
        if (this._uw.loaded==true){
