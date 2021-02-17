@@ -244,7 +244,7 @@
 
 
         <div class="form-group">
-        <label class="control-label">Método de pago</label>
+       
         <div class="product-sort" style="float: left !important;">
         <div class="ui selection dropdown vchrt-dropdown">
           <input name="gender" type="hidden" value="default">
@@ -315,21 +315,30 @@
       </div>
     </div>
     <div class="bs-canvas-footer" *ngIf="this._uw.info[0]"> 
-      <div class="cart-total-dil saving-total ">
-        <h4 [hidden]="this._uw.currency==this._uw.info[0].bs || !this._uw.paypal ">Comisión PayPal</h4>
+       <div class="cart-total-dil saving-total " [hidden]="this._uw.currency==this._uw.info[0].bs || !this._uw.paypal && !this._uw.zelle">
+        <h4 >Subtotal $USD</h4>
+        <span>{{_uw.total*this._uw.currency | number: '1.0-2'}}</span>
+      </div>
+      <div class="cart-total-dil saving-total " [hidden]="this._uw.currency==this._uw.info[0].bs || !this._uw.paypal ">
+        <h4 >Comisión PayPal</h4>
         <span>{{(_uw.total*this._uw.comision/100)*this._uw.currency | number: '1.0-2'}}</span>
       </div>
-      <div class="cart-total-dil saving-total ">
-        <h4 [hidden]="this._uw.currency==this._uw.info[0].bs || !this._uw.zelle ">Comisión Zelle</h4>
+      <div class="cart-total-dil saving-total " [hidden]="this._uw.currency==this._uw.info[0].bs || !this._uw.zelle ">
+        <h4 >Comisión Zelle</h4>
         <span>{{(_uw.total*this._uw.comision/100)*this._uw.currency | number: '1.0-2'}}</span>
       </div>
       <div class="main-total-cart">
         <h2 [hidden]="this._uw.currency==this._uw.info[0].usd ">Total BsS</h2>
-        <h2 [hidden]="this._uw.currency==this._uw.info[0].bs ">Total $USD</h2>
-        
-        <span [hidden]="this._uw.currency==this._uw.info[0].bs ">{{((_uw.total*_uw.comision/100)+_uw.total)*this._uw.currency | number: '1.0-2'}}</span>
         <span  [hidden]="this._uw.currency==this._uw.info[0].usd ">{{_uw.total *this._uw.currency | number: '1.0-0'}}</span>
       </div>
+
+      <div class="main-total-cart">
+        <h2 [hidden]="this._uw.currency==this._uw.info[0].bs ">Total $USD</h2>
+        <span [hidden]="this._uw.currency==this._uw.info[0].bs ">{{((_uw.total*_uw.comision/100)+_uw.total)*this._uw.currency | number: '1.0-2'}}</span>
+      </div>
+
+
+
       <div class="checkout-cart">
 
         <a (click)="procesar()" class="cart-checkout-btn hover-btn" [hidden]="_uw.feet!=0"  style="color: white;" >Procesar compra</a>
