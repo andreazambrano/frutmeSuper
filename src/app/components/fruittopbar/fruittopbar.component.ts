@@ -61,6 +61,29 @@ export class FruittopbarComponent implements OnInit {
     this.loadInfo();
     this._uw.currency=this._uw.info[0].usd;
   }
+
+oncart(index){
+   let id=index;
+  this.tixs[id].oncart=true;
+  // console.log("en el carrito");
+   this.cartCalculate();
+}
+
+cartCalculate(){
+  this._uw.car =[];
+  this._uw.numProd=0;
+  this._uw.total=0;
+  // console.log("tamaño: "+this._uw.totalTixs)
+  for (let i = 0; i < this._uw.totalTixs; i++){
+    if (this.tixs[i].quantity>0){
+      this._uw.car.push(this.tixs[i]);
+      this._uw.numProd=this._uw.numProd+1;
+      this._uw.total=this._uw.total+(this.tixs[i].quantity*this.tixs[i].globalPrice);
+    }
+  }
+}
+
+
   getAllTixs(){
     this.dataApi
     .getAllTixs()

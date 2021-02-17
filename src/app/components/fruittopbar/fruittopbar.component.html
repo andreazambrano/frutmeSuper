@@ -293,6 +293,10 @@
    
           </div>
           <div class="cart-text">
+            
+
+
+            
             <h4 >{{tix.productName}}</h4>
             <h4 [hidden]="this._uw.currency==this._uw.info[0].bs">{{tix.quantity}}({{tix.presentacion}}) x {{tix.globalPrice*this._uw.currency |  number:'1.0-2' }}</h4>
               <h4 [hidden]="this._uw.currency==this._uw.info[0].usd ">{{tix.quantity}}({{tix.presentacion}}) x {{tix.globalPrice*this._uw.currency |  number:'1.0-0' }}</h4>
@@ -308,7 +312,7 @@
              </div>
             </div>
             
-            <button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button>
+            <!-- <button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button> -->
           </div>
         </div>
         
