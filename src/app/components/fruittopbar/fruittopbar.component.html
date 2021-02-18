@@ -356,14 +356,14 @@
     <div class="top-header-group">
       <div class="top-header">
         <div class="res_main_logo">
-          <a href="index.html"><img src="assets/assetssuper/images/logo.png" alt="frutme"></a>
+          <a ><img src="assets/assetssuper/images/logo.png" alt="frutme"></a>
         </div>
         <div class="main_logo" id="logo">
-          <a href="index.html"><img src="assets/assetssuper/images/logo.png" alt="frutme"></a>
-          <a href="index.html"><img class="logo-inverse" src="assets/assetssuper/images/logo.png" alt="frutme"></a>
+          <a ><img src="assets/assetssuper/images/logo.png" alt="frutme"></a>
+          <a ><img class="logo-inverse" src="assets/assetssuper/images/logo.png" alt="frutme"></a>
         </div>
         <div class="catey__icon" style="margin-right: -27px;margin-left: 100px; ">
-          <a href="#" class="cate__btn" data-toggle="modal" data-target="#category_model" title="Categorias">  
+          <a href="#" class="cate__btn" data-toggle="modal" data-target="#category_model" title="Categorias" [hidden]="!this._uw.allLoaded">  
             <img src="assets/assetssuper/images/category/icon-1.svg" [hidden]="this._uw.categorySelected!='hortalizas'" alt="frutme" style="width: 30px;">
              <img src="assets/assetssuper/images/category/icon-2.svg" alt="frutme" [hidden]="this._uw.categorySelected!='viveres'"style="width: 30px;">
             <img src="assets/assetssuper/images/category/icon-3.svg" alt="frutme" [hidden]="this._uw.categorySelected!='bebidas'"style="width: 30px;">
@@ -386,7 +386,7 @@
               <a href="#" class="offer-link">+58<i class="uil uil-phone-alt"></i>414-752-9202</a>
             </li>
             <li>
-              <a href="#" class="category_drop hover-btn" data-toggle="modal" data-target="#category_model" title="Categories">
+              <a href="#" class="category_drop hover-btn" data-toggle="modal" data-target="#category_model" title="Categories" [hidden]="!this._uw.allLoaded">
                 <img src="assets/assetssuper/images/category/icon-1.svg" alt="frutme" alt="frutme" [hidden]="this._uw.categorySelected!='hortalizas'"style="width: 30px;">
                  <img src="assets/assetssuper/images/category/icon-2.svg" alt="frutme" [hidden]="this._uw.categorySelected!='viveres'"style="width: 30px;">
                 <img src="assets/assetssuper/images/category/icon-3.svg" alt="frutme" [hidden]="this._uw.categorySelected!='bebidas'"style="width: 30px;">

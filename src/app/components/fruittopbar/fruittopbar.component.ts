@@ -24,11 +24,33 @@ export class FruittopbarComponent implements OnInit {
   loadAPI = null;  
   filter(parametro:string){
     if(this._uw.allLoaded!=true){
-        this.getAllTixs();
+        // this.getAllTixs();
+        this._uw.showAll=true;
+        this._uw.allLoaded=true;
     }
     this._uw.showAll=false;
     this._uw.categorySelected=parametro;
   }
+
+loadmore(){
+  this.getAllTixs();
+  this.getTamano();
+     // this.scrollTopService.setScrollTop();
+  this._uw.allLoaded=true;
+  this._uw.showAll=true;
+}
+getTamano(){
+    this.dataApi
+    .getTamano()
+    .subscribe((res:any) => {
+      if (res[0] === undefined){
+        return
+        }else{
+         this._uw.totalTixs = res.length;
+        }
+      });
+  }
+  
   loadInfo(){
     this.dataApi
     .getInfo()
