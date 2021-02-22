@@ -2117,7 +2117,7 @@ span.like-icon {
 }
 
 .qty-cart {
-	display: flex;
+	display: block;
 	align-items: center;
 	margin-top: 17px;
 }
