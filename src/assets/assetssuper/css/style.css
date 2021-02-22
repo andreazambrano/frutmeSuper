@@ -2043,7 +2043,12 @@ span.like-icon {
 	transform: scale(1.1);
 }
 
-
+.product-h:hover  {
+ box-shadow: 0 10px 15px rgba(0, 0, 0, 0.09);
+   transform: translateY(-5px);
+   /*transform: scale(1.05);*/
+   transition: all .5s;
+}
 
 
 .offer-badge-2 {

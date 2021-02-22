@@ -8,7 +8,7 @@
 						<div class="col-lg-3 col-md-6 col-xs-6" *ngFor="let tix of tixs;let i = index" [hidden]="tix.categorySuper!=this._uw.categorySelected && !this._uw.showAll" >
 
 							
-							<div class="product-item mb-30" [hidden]="tix.oncart ">
+							<div class="product-item mb-30 product-h" [hidden]="tix.oncart ">
 								<a href="#" class="product-img">
 									<img src="{{tix.images[0]}}" alt="">
 									<div class="product-absolute-options">
@@ -59,7 +59,13 @@
 									</div>
 								</div>
 							</div>
-							<div class="product-item mb-30"  [hidden]="!tix.oncart " style="box-shadow:4px 6px 21px 9px #07d76514"	>
+							<div class="product-item mb-30"  [hidden]="!tix.oncart " style=" box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);  transform: translateY(-5px);"	>
+
+								<!-- 	<div class="product-item mb-30"  [hidden]="!tix.oncart " style="box-shadow:4px 6px 21px 9px #07d76514"	> -->
+
+								
+								   
+
 								<a href="#" class="product-img">
 									<img src="{{tix.images[0]}}" alt="">
 									<div class="product-absolute-options">
