@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserWService } from "../../services/user-w.service";
+import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-fruitbanner',
@@ -10,6 +12,8 @@ export class FruitbannerComponent implements OnInit {
 
   constructor(
   public _uw:UserWService,
+      public router: Router
+
   	) { }
    loadAPI = null;  
    url="assets/assetssuper/vendor/OwlCarousel/owl.carousel.js";
