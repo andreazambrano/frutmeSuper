@@ -12,7 +12,10 @@ export class FruitbannerComponent implements OnInit {
 
   constructor(
   public _uw:UserWService,
-      public router: Router
+  public location: Location,
+  public router: Router
+
+
 
   	) { }
    loadAPI = null;  
