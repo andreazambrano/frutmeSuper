@@ -299,6 +299,7 @@ to3(){
     }
 
   ngOnInit() {
+    this._uw.feet=0;
     if (this._uw.loaded==true){
       this.loadAPI = new Promise(resolve => {
         this.loadInfo1();
