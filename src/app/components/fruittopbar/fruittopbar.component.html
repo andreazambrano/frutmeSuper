@@ -315,6 +315,26 @@
                 <label class="control-label"style="font-size: 18px;" [hidden]="_uw.method">- deseas usar ?  </label>
               </div>
             </div>
+             <div *ngIf="submitted && fval.email.errors" class="invalid-feedback">
+                  <div *ngIf="fval.email.errors.required" class="errorLabel">
+                  * Una dirección de correo electrónico para comunicarnos.
+                  </div>
+              </div>
+ <div *ngIf="submitted && fval.personaContacto.errors" class="invalid-feedback">
+                  <div *ngIf="fval.personaContacto.errors.required" class="errorLabel">
+                  * Nombre de la persona que recibe.
+                  </div>
+              </div>
+  <div *ngIf="submitted && fval.telefono.errors" class="invalid-feedback">
+                  <div *ngIf="fval.personaContacto.errors.required" class="errorLabel">
+                  * Un número de teléfono de la persona que recibe.
+                  </div>
+              </div>
+  <div *ngIf="submitted && fval.direccion.errors" class="invalid-feedback">
+                  <div *ngIf="fval.direccion.errors.required" class="errorLabel">
+                  * Dirección donde deseas que llevemos tu pedido.
+                  </div>
+              </div>
           </div>
 
 
