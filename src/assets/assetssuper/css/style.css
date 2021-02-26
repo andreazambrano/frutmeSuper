@@ -1291,12 +1291,24 @@ background-image:-webkit-linear-gradient(left, #fff, #fff);
 .cart-checkout-btn {
 	display: inline-block;
     margin-bottom: 0;
-    margin-left: auto;
+    margin-right:  auto;
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 18px;
     font-size: 14px;
     color: #fff;
     background: #f55d2c;
+    font-weight: 500;
+}
+
+.cart-proccess-btn {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: auto;
+    padding: 10px 15px;
+    border-radius: 18px;
+    font-size: 14px;
+    color: #fff;
+    background: #07d765;
     font-weight: 500;
 }
 

@@ -1,5 +1,6 @@
 export interface OrderInterface {
 	car?:Array<string>;	
+	currency?:string;
 	email?:string;
 	direccion?:string;
 	id?:string;

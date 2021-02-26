@@ -40,6 +40,7 @@ export class UserWService {
 	info:any={};
 	isLogged:boolean=false;
 	loaded:boolean=false;
+	method:string;
 	moccs:boolean=false;
 	name:string;
 	numProd:number=0;
