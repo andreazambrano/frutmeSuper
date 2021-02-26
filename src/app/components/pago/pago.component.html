@@ -5,17 +5,17 @@
                 <div class="order-placed-dt">
                     <i class="uil uil-check-circle icon-circle" style="color: #005e53ff;"></i>
                     <h2>Tu orden fue procesada con éxito</h2>
-                    <p>Nro de pedido: {{this._uw.order.npedido}}</p>
+                    <p>Revisa el buzón de entrada en <span> {{ this._uw.order.email }} </span> y sigue las instrucciones</p>
                     <p> </p>
                     <div class="delivery-address-bg">
                         <div class="title585">
                             <div class="pln-icon"><i class="uil uil-telegram-alt"></i></div>
-                            <h4>Datos de tu pedido</h4>
+                            <h4>Datos de tu pedido Nro: {{this._uw.order.npedido}}</h4>
                         </div>
                         <ul class="address-placed-dt1">
                             <li><p><i class="uil uil-map-marker-alt"></i>Direccion :<span> {{this._uw.order.direccion}}</span></p></li>
                             <li><p><i class="uil uil-phone-alt"></i>Teléfono :<span>{{this._uw.order.telefono}}</span></p></li>
-                            <li><p><i class="uil uil-envelope"></i>Email :<span>{{this._uw.order.email}}</span></p></li>
+                            <li><p><i class="uil uil-envelope"></i>Método de pago :<span>{{this._uw.order.metodo}}</span></p></li>
                            
                         </ul>
                     <!--     <div class="stay-invoice">
