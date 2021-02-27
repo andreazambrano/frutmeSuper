@@ -242,7 +242,7 @@ cartCalculate(){
       if(met=="zelle"){
         this._uw.comision=this._uw.info[0].zelle;
         this._uw.zelle=true;
-             this._uw.paypal=false;
+        this._uw.paypal=false;
       }
        if(met=="efectivo"){
         this._uw.comision=0;
