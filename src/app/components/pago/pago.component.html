@@ -7,8 +7,8 @@
                     <h2>Tu orden fue procesada con éxito</h2>
                     <p [hidden]="this._uw.method=='paypal' || this._uw.method=='zelle'  "  >Revisa tu buzón de entrada <span style="font-weight: 600;">  {{ this._uw.order.email }} </span> y sigue las instrucciones de pago
                     </p>
-                    <p [hidden]="this._uw.method!='paypal'">Procede con el pago haciendo click aqui: <a href="{{this._uw.info[0].paypalLink}}" target="_blank"></a> </p>
-                        <p [hidden]="this._uw.method!='zelle'">Correo para el pago Zelle: <a href="{{this._uw.info[0].paypalLink}}" target="_blank"></a> </p>
+                    <p [hidden]="this._uw.method!='paypal'">Procede con el pago haciendo click aqui: <a href="{{this._uw.info[0].paypaladdress}}" target="_blank">{{this._uw.info[0].paypaladdress}}</a> (Recuerda realizar una captura)</p>
+                        <p [hidden]="this._uw.method!='zelle'">Dirección email para el pago Zelle: <a>{{this._uw.info[0].zelleaddress}}</a> (Recuerda realizar una captura)</p>
                     <div class="delivery-address-bg">
                         <div class="title585">
                             <div class="pln-icon"><i class="uil uil-shopping-cart-alt"></i></div>
@@ -17,7 +17,7 @@
                         <ul class="address-placed-dt1">
                             <li><p><i class="uil uil-map-marker-alt"></i>Dirección:<span> {{this._uw.order.direccion}}</span></p></li>
                             <li><p><i class="uil uil-phone-alt"></i>Teléfono:<span>{{this._uw.order.telefono}}</span></p></li>
-                            <li><p><i class="uil uil-money-withdrawal"></i>Enlace de pago PayPal:<span>{{this._uw.order.metodo}}</span></p></li>
+                            <li><p><i class="uil uil-money-withdrawal"></i>Método de pago:<span>{{this._uw.order.metodo}}</span></p></li>
                            
                         </ul>
                     <!--     <div class="stay-invoice">
