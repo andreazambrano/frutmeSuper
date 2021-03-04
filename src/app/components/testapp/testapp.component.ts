@@ -110,8 +110,9 @@ cartCalculate(){
 }
 
   ngOnInit() {
-     this.getAllTixsInitload();
+     // this.getAllTixsInitload();
      this.getTamanoIni();
+     this.loadmore();
      this._uw.categorySelected="hortalizas";
 
   }
